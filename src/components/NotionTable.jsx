@@ -29,7 +29,7 @@ const NotionTable = ({ data, header, background, color }) => {
           <p style={{ color: `${color}` }}>{content.desc}</p>
           <a href={content.url} style={{ color: `${color}` }}>{content.action}</a>
         </div>
-        <div className="notion__content_half_lefti">
+        <div className="notion__content__half__left">
           <img src={content.image} alt={content.header} />
         </div>
       </div>

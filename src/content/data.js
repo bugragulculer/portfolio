@@ -67,7 +67,7 @@ export const data = {
     },
     MainHeader: {
       header1: "Hi there!",
-      header2: "I'm a Designer, Front-End Developer, and Content Creator!",
+      header2: "I'm a Designer, Software Developer, and Content Creator!",
       logo: Header,
     },
     SubHeader: {
@@ -84,10 +84,10 @@ export const data = {
         item2: ["Affinity Designer", "Adobe Photoshop", "Figma", "Webflow", "Invision", "Pen & Paper"],
       },
       {
-        header: "Front-End Developer",
+        header: "Software Developer",
         desc: "I love to plan and develop things from scratch and blend different ideas in the same pot.",
         topic1: "Languages & Libraries I Know",
-        item1: "Javascript, React, HTML, CSS, Sass, TypeScript, Redux",
+        item1: "Javascript, HTML, CSS, React, Express, MongoDB, Sass, TypeScript, Redux",
         topic2: "Dev Tools",
         item2: ["Terminal", "GitHub", "Storybook", "Visual Studio Code", "Codepen"],
       },
@@ -172,7 +172,7 @@ export const data = {
       subheader: "I am sending a newsletter every Friday. No spam. Unsubscribe anytime.",
       mail: "Your Email",
       name: "Your Name",
-      subcribe: "Subscribe",
+      subscribe: "Subscribe",
     },
     BlogHeader: {
       name: "iOS 15 ",
@@ -340,7 +340,7 @@ export const data = {
     },
     MainHeader: {
       header1: "Merhaba!",
-      header2: "Ben Tasarımcı, Front-End Geliştirici ve İçerik Üreticisiyim.",
+      header2: "Ben Tasarımcı, Yazılım Geliştirici ve İçerik Üreticisiyim.",
       logo: Header,
     },
     SubHeader: {
@@ -359,7 +359,7 @@ export const data = {
       },
       {
         logo: "",
-        header: "Front-End Geliştirici",
+        header: "Yazılım Geliştirici",
         desc: "Bir şeyleri en baştan planlayıp geliştirmeyi, farklı fikirleri aynı kapta harmanlamayı çok seviyorum.",
         topic1: "Bildiğim Diller ve Kütüphaneler",
         item1: "Javascript, React, HTML, CSS, Sass, TypeScript, Redux",
@@ -436,7 +436,7 @@ export const data = {
       subheader: "Her Cuma haftalık bültenimi mail kutunuzda bulabilirsiniz! Spam yok. Istediginiz zaman kaydınızı silin.",
       mail: "Mail Adresiniz",
       name: "Adınız",
-      subcribe: "Abone Ol",
+      subscribe: "Abone Ol",
     },
     BlogHeader: {
       name: "iOS 15",
