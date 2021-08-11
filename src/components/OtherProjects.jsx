@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 
 function OtherProjectsEN({ data, otherProjects }) {
   return (
@@ -10,7 +9,7 @@ function OtherProjectsEN({ data, otherProjects }) {
           <div className="projects__item" key={e.header}>
             <h2>{e.header}</h2>
             <p>{e.desc}</p>
-            <Link className="projects__item__link" to={e.url}>Learn More</Link>
+            <a className="projects__item__link" href={e.url}>Learn More</a>
           </div>
         ))}
       </div>

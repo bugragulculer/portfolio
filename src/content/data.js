@@ -97,42 +97,34 @@ export const data = {
         logo: Dashboard,
         name: "E-commerce",
         desc: "React and Redux based E-Commerce dashboard to keep track of sales, customers and analytics.",
-        url: "",
+        url: "https://greentangerin-dashboard.web.app",
       },
       {
         logo: Market,
         name: "Market",
         desc: "A small React based market mockup to get product details from API and sort, filter, paginate the products. By Redux all these products can be added and removed from the cart as well.",
-        url: "",
+        url: "https://market-mockup.herokuapp.com/",
         
       },
       {
         logo: Bugra,
         name: "Bugra Gulculer",
         desc: "Current website you're in! It is designed and developed to showcase my work in the most personal way possible.",
-        url: ""
+        url: "https://bugragulculer.com"
 
       },
       {
         logo: GreenTangerin,
         name: "Green Tangerin",
         desc: "Brand new Green Tangerin website which is still under construction. Payment system will be implemented. It is designed and developed to showcase my illustrations and sell them in a neat and easy way.",
-        url: "",
+        url: "https://greentangerinwebsite.web.app/home",
 
       },
       {
         logo: Google,
         name: "Google Clone",
         desc: "Using Google API and React, I have developed a Google clone which can get search results and show it to you.",
-        url: "",
-
-      },
-      {
-        logo: GreenTangerin,
-        name: "Green Tangerin",
-        desc: "Current Green Tangerin website which is deployed on Webflow. It will be retired after the version 2 is finished.",
-        url: "",
-
+        url: "https://clone-f557f.web.app/",
       },
     ],
     ShareProject: [
@@ -372,31 +364,31 @@ export const data = {
         logo: Dashboard,
         name: "E-commerce",
         desc: "Satışları, müşterileri ve analitiği takip etmek için React ve Redux tabanlı E-Ticaret panosu.",
+        url: "https://greentangerin-dashboard.web.app",
       },
       {
         logo: Market,
         name: "Market",
         desc: "API'den ürün ayrıntılarını almak ve ürünleri sıralamak, filtrelemek, sayfalamak için küçük bir React tabanlı pazar modeli. Redux tarafından tüm bu ürünler sepete eklenebilir ve sepetten çıkarılabilir.",
+        url: "https://market-mockup.herokuapp.com/",
       },
       {
         logo: Bugra,
         name: "Bugra Gulculer",
         desc: "Bulunduğunuz güncel web sitesi! Çalışmamı mümkün olan en kişisel şekilde sergilemek için tasarlanmış ve geliştirilmiştir.",
+        url: "https://bugragulculer.com"
       },
       {
         logo: GreenTangerin,
         name: "Green Tangerin",
         desc: "Henüz yapım aşamasında olan yepyeni Green Tangerin web sitesi. Ödeme sistemi entegre edilecektir. Çizimlerimi sergilemek ve bunları düzgün ve kolay bir şekilde satmak için tasarlanmış ve geliştirilmiştir.",
+        url: "https://greentangerinwebsite.web.app/home",
       },
       {
         logo: Google,
         name: "Google Clone",
         desc: "Google API ve React kullanarak, arama sonuçlarını alabilen ve size gösterebilen bir Google klonu",
-      },
-      {
-        logo: GreenTangerin,
-        name: "Green Tangerin",
-        desc: "Webflow'ta hazırlanmış güncel Green Tangerin web sitesi. Sürüm 2 tamamlandıktan sonra kullanımdan kaldırılacaktır.",
+        url: "https://clone-f557f.web.app/",
       },
     ],
     ShareProject: [
