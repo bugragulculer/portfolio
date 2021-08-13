@@ -36,17 +36,18 @@ export const data = {
         url: "/notion",
       },
       {
-        id: "2",
-        title: "Blog",
-        cName: "blog",
-        url: "/blog",
-      },
-      {
         id: "3",
         title: "Podcast",
         cName: "podcast",
         url: "/podcast",
       },
+      {
+        id: "2",
+        title: "Blog",
+        cName: "blog",
+        url: "https://blog.bugragulculer.com",
+      },
+      
       {
         id: "4",
         title: "YouTube",
@@ -301,16 +302,16 @@ export const data = {
         url: "/tr/notion",
       },
       {
-        id: "2",
-        title: "Blog",
-        cName: "blog",
-        url: "/tr/blog",
-      },
-      {
         id: "3",
         title: "Podcast",
         cName: "podcast",
         url: "/tr/podcast",
+      },
+      {
+        id: "2",
+        title: "Blog",
+        cName: "blog",
+        url: "https://bugrahangulculer.medium.com/",
       },
       {
         id: "4",

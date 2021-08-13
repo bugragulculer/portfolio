@@ -67,62 +67,63 @@
 }
 
 .abilities {
-  margin-top: -150px;
+  width: 100%;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  z-index: 5;
-}
-
-.abilities__container {
-  width: 750px;
-  height: 750px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  background-color: #fff;
-  border-radius: 10px;
-  border: solid 2px #ddd;
-  z-index: 5;
-
-}
-
-.abilities__half {
-  width: 374px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-family: 'Work Sans', sans-serif;
-  padding: 20px;
-  z-index: 5;
-
-  h1 {
-    font-size: 24px;
-    font-weight: 600;
-    margin: 0;
-    text-align: center;
-    margin-top: 40px;
-    margin-bottom: 20px;
-    letter-spacing: -1px;
-  }
-  p {
-    font-size: 16px;
-    font-weight: 300;
-    margin: 0;
-    text-align: center;
-    margin-bottom: 10px;
-  }
-  h2 {
-    font-size: 20px;
-    font-weight: 500;
-    margin: 0;
-    text-align: center;
-    margin-top: 40px;
-    margin-bottom: 20px;
-    letter-spacing: -1px;
+  .abilities__container {
+    background-color: #fff;
+    width: 820px;
+    align-items: center;
+    justify-content: center;
+    display: flex; 
+    margin-top: -150px;
+    margin-bottom: -20px;
+    z-index: 5;
+    border: solid 2px #4531c2;
+    border-radius: 10px;;
+    .abilities__half {
+      width: 390px;
+      display: flex;
+      flex-direction: row;
+      align-items: stretch;
+      justify-content:space-between;
+      .abilities__half__content{
+        width: 350px;
+        padding-left: 25px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        height: 750px;
+        div {
+          height: 20px; 
+          margin: 100px 0;
+          transform: scale(6);
+        }
+        h1 {
+          font-size: 26px;
+          margin: 0;
+          margin-bottom: 20px;
+        }
+        p {
+          font-size: 16px;
+          margin: 0;
+          text-align: center;
+          margin-bottom: 10px;
+        }
+        h2 {
+          font-size: 22px;
+          margin-bottom: 20px;
+        }
+      }
+      .divider {
+        height: 750px;
+        border: solid 1px #4531c2;
+        margin: 0;
+        padding: 0;
+      }
+    }
   }
 }
 
@@ -399,7 +400,7 @@ input {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 750px ;
+    width: 820px ;
     border: solid 2px #fff;
     margin-top: 50px;
     padding-bottom: 50px;
