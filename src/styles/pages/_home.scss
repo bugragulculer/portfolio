@@ -1,37 +1,36 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
-
+// Main Header Component
 .home__header {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
   margin-bottom: 50px;
+  .header__text {
+    margin: 0 75px;
+    h1 {
+      font-size: 24px;
+      font-weight: 300;
+      font-family: 'Lato', sans-serif;
+      letter-spacing: -1px;
+    }
+    h2 {
+      font-size: 40px;
+      font-weight: 500;
+      font-family: 'Lato', sans-serif;
+      width: 400px;
+      letter-spacing: -1px;
+      text-align: start;
+    }
+  }
   img {
     height: 300px;
     width: 300px;
     border-radius: 500px;
   }
 }
-
-.header__text {
-  margin: 0 75px;
-  h1 {
-    font-size: 24px;
-    font-weight: 300;
-    font-family: 'Lato', sans-serif;
-    letter-spacing: -1px;
-  }
-  h2 {
-    font-size: 40px;
-    font-weight: 500;
-    font-family: 'Lato', sans-serif;
-    width: 400px;
-    letter-spacing: -1px;
-    text-align: start;
-  }
-}
-
-.purple__section {
+// Subheader Component
+.subheader {
   height: 450px;
   width: 100%;
   background-color: #4531c2;
@@ -58,14 +57,7 @@
     color: #fff;
   }
 }
-
-.podcast__newsletter {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-}
-
+// My Abilities Component
 .abilities {
   width: 100%;
   display: flex;
@@ -81,13 +73,14 @@
     margin-bottom: -20px;
     z-index: 5;
     border: solid 2px #4531c2;
-    border-radius: 10px;;
+    border-radius: 10px;
     .abilities__half {
       width: 390px;
       display: flex;
       flex-direction: row;
-      align-items: stretch;
-      justify-content:space-between;
+      align-items: flex-start;
+      justify-content: space-between;
+      height: 810px;
       .abilities__half__content{
         width: 350px;
         padding-left: 25px;
@@ -96,6 +89,13 @@
         align-items: center;
         justify-content: flex-start;
         height: 750px;
+        .icon__container {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          transform: scale(4.5);
+          color: #4531c2;
+        }
         div {
           height: 20px; 
           margin: 100px 0;
@@ -118,136 +118,126 @@
         }
       }
       .divider {
-        height: 750px;
-        border: solid 1px #4531c2;
+        height: 810px;
+        border: solid 1px #dadada;
         margin: 0;
         padding: 0;
       }
     }
   }
 }
-
-.icon__container {
-  height: 100px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transform: scale(4.5);
-  color: #4531c2;
-}
-
-.recent__works__rectangle {
-  height: 150px;
-  width: 100%;
-  background-color: #4531c2;
-  margin: 0;
-  margin-top: -150px;
-}
-.recent__works__container {
-  background-color: #4531c2;
-  margin: 0;
-  margin-top: -22px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-family: 'Work Sans', sans-serif;
-  h1 {
-    color: #fff;
-    font-weight: 500;
-    margin-top: 80px;
-    margin-bottom: 40px;
-    letter-spacing: -1px;
+// Recent Works Component
+.recent__works {
+  .recent__works__container {
+    background-color: #4531c2;
+    margin: 0;
+    margin-top: -22px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Work Sans', sans-serif;
+    h1 {
+      color: #fff;
+      font-weight: 500;
+      margin-top: 80px;
+      margin-bottom: 40px;
+      letter-spacing: -1px;
+    }
+    div {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      max-width: 850px;
+      margin-bottom: 80px;
+      background-color: #4531c2;
+      .recent__works__item {
+        width: 400px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 250px;
+        background-color: #fff;
+        margin: 10px;
+        border-radius: 10px;
+        text-decoration: none;
+        transition: all 0.4s ease-out;
+        .works__logo {
+          max-width: 75%;
+          object-fit: contain;
+          max-height: 75%;
+          transition: all 0.4s ease-out;
+          margin: 0;
+        }
+        .close {
+          position: absolute;
+          width: 400px;
+          height: 250px;
+          object-fit: contain;
+          opacity: 0;
+          overflow: hidden;
+        }
+        .show {
+          background-color: #4531c2;
+          height: 210px;
+          width: 360px;
+          border: solid 2px #fff;
+          border-radius: 10px;
+          color: #fff;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          text-align: center;
+          font-size: 18px;
+          padding: 20px;
+          font-weight: 300;
+        }
+      }
+    }
   }
-  div {
+  .recent__works__buttons {
+    margin: 0;
+    margin-top: -40px;
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    max-width: 850px;
-    margin-bottom: 80px;
-    background-color: #4531c2;
+    a {
+      text-decoration: none;
+    }
+    p {
+      height: 80px;
+      width: 300px;
+      background-color: #fff;
+      border: solid 2px #4531c2;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      margin: 0 50px;
+      padding: 0;
+      border-radius: 50px;
+      text-decoration: none;
+      transition: all 0.3s ease-out;
+      font-size: 20px;
+      color: #4531c2;
+      font-weight: 400;
+      font-family: 'Work Sans', sans-serif;
+      letter-spacing: -1px;
+      box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    }
+    p:hover {
+      color: #fff;
+      background-color: #604ce0;
+      box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+      transition: all 0.3s ease-out;
+    }
   }
 }
-
-.recent__works__item {
-  width: 400px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 250px;
-  background-color: #fff;
-  margin: 10px;
-  border-radius: 10px;
-  text-decoration: none;
-  transition: all 0.4s ease-out;
-}
-
-.close {
-  position: absolute;
-  width: 400px;
-  height: 250px;
-  object-fit: contain;
-  opacity: 0;
-  overflow: hidden;
-}
-.show {
-  background-color: #4531c2;
-  height: 210px;
-  width: 360px;
-  border: solid 2px #fff;
-  border-radius: 10px;
-  color: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  font-size: 18px;
-  padding: 20px;
-  font-weight: 300;
-}
-
-.recent__works__buttons {
-  margin: 0;
-  margin-top: -40px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  a {
-    text-decoration: none;
-  }
-  p {
-    height: 80px;
-    width: 300px;
-    background-color: #fff;
-    border: solid 2px #4531c2;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    margin: 0 50px;
-    padding: 0;
-    border-radius: 50px;
-    text-decoration: none;
-    transition: all 0.3s ease-out;
-    font-size: 20px;
-    color: #4531c2;
-    font-weight: 400;
-    font-family: 'Work Sans', sans-serif;
-    letter-spacing: -1px;
-    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-  }
-  p:hover {
-    color: #fff;
-    background-color: #604ce0;
-    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-    transition: all 0.3s ease-out;
-  }
-}
-
+// Other Projects Component
 .other__projects__container {
   display: flex;
   flex-direction: column;
@@ -268,42 +258,42 @@
     flex-wrap: wrap;
     max-width: 850px;
     z-index: 2;
-  }
-  .projects__item {
-    width: 400px;
-    height: 250px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    border-radius: 10px;
-    border: solid 2px #4531c2;
-    margin: 10px;
-    background-color: #fff;
-  }
-  .projects__item h2 {
-    font-size: 24px;
-    letter-spacing: -1.5px;
-    font-weight: 400;
-    text-align: center;
-  }
-  .projects__item p {
-    font-size: 17px;
-    letter-spacing: -1px;
-    font-weight: 300;
-    text-align: center;
-    max-width: 360px;
-  }
-  .projects__item__link {
-    font-size: 17px;
-    letter-spacing: -1px;
-    font-weight: 400;
-    text-align: center;
-    color: #4531c2;
+    .projects__item {
+      width: 400px;
+      height: 250px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      border-radius: 10px;
+      border: solid 2px #4531c2;
+      margin: 10px;
+      background-color: #fff;
+      h2 {
+        font-size: 24px;
+        letter-spacing: -1.5px;
+        font-weight: 400;
+        text-align: center;
+      }
+      p {
+        font-size: 17px;
+        letter-spacing: -1px;
+        font-weight: 300;
+        text-align: center;
+        max-width: 360px;
+      }
+      a {
+        font-size: 17px;
+        letter-spacing: -1px;
+        font-weight: 400;
+        text-align: center;
+        color: #4531c2;
+      }
+    }
   }
 }
-
-.two__section {
+// Newsletter Form Component 
+.newsletter__form {
   background-color: #4531c2;
   height: 500px;
   margin-top: -22px;
@@ -326,67 +316,55 @@
     text-align: center;
     letter-spacing: -1px;
   }
+  form {
+    display: flex;
+    flex-direction: column;
+    li {
+      display: none;
+    }
+    label {
+      display: flex;
+      flex-direction: column;
+      width: 30vw;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 0px;
+      font-weight: 300;
+      height: 60px;
+      max-width: 750px;
+    }
+    input {
+      margin-top: 10px;
+      background-color: #f6f6f6;
+      border: 1px solid #242424;
+      border-radius: 5px;
+      height: 40px;
+      font-weight: 400;
+      font-size: 14px;
+      width: 400px;
+      padding: 0 25px;
+    }
+    .button {
+      background-color: #4531c2;
+      font-weight: 300;
+      font-size: 14px;
+      color: white;
+      border: solid 2px #fff;
+      border-radius: 10px;
+      outline: 0px;
+      text-align: center;
+      justify-content: center;
+      cursor: pointer;
+      text-decoration: none;
+      width: 200px;
+      align-self: center;
+      height: 50px;
+      transition: all 0.4s ease-out;
+      margin-top: 40px;
+    }
+  }
 }
-
-form {
-  display: flex;
-  flex-direction: column;
-}
-
-li {
-  display: none;
-}
-
-label {
-  display: flex;
-  flex-direction: column;
-  width: 30vw;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 0px;
-  font-weight: 300;
-  height: 60px;
-  max-width: 750px;
-}
-
-input {
-  margin-top: 10px;
-  background-color: #f6f6f6;
-  border: 1px solid #242424;
-  border-radius: 5px;
-  height: 40px;
-  font-weight: 400;
-  font-size: 14px;
-  width: 400px;
-  padding: 0 25px;
-}
-.button {
-  background-color: #4531c2;
-  font-weight: 300;
-  font-size: 14px;
-  color: white;
-  border: solid 2px #fff;
-  border-radius: 10px;
-  outline: 0px;
-  text-align: center;
-  justify-content: center;
-  cursor: pointer;
-  text-decoration: none;
-  width: 200px;
-  align-self: center;
-  height: 50px;
-  transition: all 0.4s ease-out;
-  margin-top: 40px;
-}
-
-.works__logo {
-  max-width: 75%;
-  object-fit: contain;
-  max-height: 75%;
-  transition: all 0.4s ease-out;
-  margin: 0;
-}
-
+// Coffee Component
 .coffee {
   width: 100%;
   display: flex;
@@ -453,23 +431,33 @@ input {
     }
   }
 }
-
+// Purple Containers
+.purple__rectangle {
+  height: 150px;
+  width: 100%;
+  background-color: #4531c2;
+  margin: 0;
+  margin-top: -150px;
+}
 @media screen and (max-width: 1000px) {
+  // Main Header Component
   .home__header {
     flex-direction: column-reverse;
+    h1,
+    h2 {
+      text-align: center;
+    }
   }
-  .header__h1,
-  .header__h2 {
-    text-align: center;
-  }
+  // Coffee Container
   .coffee {
     .coffee__border {
+      max-width: 820px;
       width: 96%;
     }
   }
 }
-
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 820px) {
+  // Main Header Component
   .home__header {
     width: 100%;
     .header__text{
@@ -486,7 +474,8 @@ input {
       font-size: 32px;
     }
   }
-  .purple__section {
+  // Subheader Component
+  .subheader {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -500,10 +489,10 @@ input {
       margin-bottom: 20px;
     }
     p {
-      margin-bottom: 100px;
+      margin-bottom: 140px;
     }
   }
-
+  // Coffee Component
   .coffee{
     width: 100%;
     display: flex;
@@ -521,56 +510,46 @@ input {
       }
     }
   }
-  .abilities__container {
-    flex-direction: column;
-    height: 1500px;
-    width: 90%;
+  // My Abilities Component
+  .abilities {
+    width: 100%;
+    .abilities__container {
+      flex-direction: column;
+      width: 90%;
+      padding-bottom: 40px;
+      h1 {
+        margin-top: -40px;
+      }
+    }
+    .divider {
+      display: none;
+    }
   }
+  // Recent Works Component
+  .recent__works {
+    .recent__works__items {
+      width: 95%;
+    }
+    .recent__works__buttons{
+      flex-direction: column;
+      .recent__works__a {
+        margin-bottom: 20px;
+        .recent__works__button {
+          margin-bottom: 10px;
+        }
+      }
 
-  .abilities__divider {
-    display: none;
+    }
   }
-  .abilities__half {
-    width: 95%;
-  }
-
-  .subheader__p,
-  .subheader__h3 {
-    width: 95%;
-  }
-  .header__text {
-    margin: 0;
-  }
-  .header__h2 {
-    width: 95%;
-  }
-
-  .recent__works__items {
-    width: 95%;
-  }
-  .recent__works__buttons {
-    flex-direction: column;
-  }
-  .recent__works__button {
-    margin-bottom: 10px;
-  }
+  // Other Projects Component
   .projects__items {
     width: 95%;
+    .projects__item {
+      padding: 0 10px;
+    }
   }
-  .recent__works__a {
-    margin-bottom: 20px;
-  }
-  .projects__item {
-    padding: 0 10px;
-  }
-  label {
-    width: 95%;
-  }
-  input {
-    width: 225px;
-  }
-
-  .two__section {
+  // Newsletter Form Component
+  .newsletter__form {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -579,6 +558,16 @@ input {
     h2, h4 {
       text-align: center;
       width: 90%;
+    }
+    form {
+      width: 100%;
+      label {
+        width: 100%;
+        input {
+          width: 75%;
+          max-width: 400px;
+        }
+      }
     }
   }
 }

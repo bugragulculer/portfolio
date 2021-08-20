@@ -8,7 +8,7 @@ function Navbar({ data }) {
   const [click, setClick] = useState(false);
   const handleClick = () => setClick(!click);
   const closeMobileMenu = () => setClick(false);
-
+  
   return (
     <nav className="navbar">
       <div className="navbar__wrapper">
@@ -17,7 +17,7 @@ function Navbar({ data }) {
         </Link>
         <ul className={click ? 'nav__menu__active' : 'nav__menu'}>
           {data.Navbar.map((e) => (
-            <div aria-hidden="true" className="navbar__main__logo" key={e.id} onClick={closeMobileMenu}>
+            <div aria-hidden="true" key={e.id} onClick={closeMobileMenu}>
               <a className={e.cName} href={e.url}>
                 {e.title}
               </a>
@@ -25,7 +25,7 @@ function Navbar({ data }) {
           ))}
         </ul>
         <div aria-hidden="true" className={click ? 'no__display' : 'display'} onClick={() => handleClick()}>
-          <MenuIcon className={click ? 'display' : 'no__display'} />
+          <MenuIcon />
         </div>
         <div aria-hidden="true" className={click ? 'display' : 'no__display'} onClick={() => handleClick()}>
           <CloseIcon />

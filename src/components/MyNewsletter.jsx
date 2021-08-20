@@ -5,7 +5,7 @@ const MyNewsletter = ({ data }) => {
   const [name, setName] = useState('');
 
   return (
-    <section className="two__section">
+    <section className="newsletter__form">
       <h2>{data.Newsletter.header}</h2>
       <h4>{data.Newsletter.subheader}</h4>
       <form action="https://youtube.us4.list-manage.com/subscribe/post?u=202596093129dd9f85893dc69&amp;id=de8bc456c2" method="GET" noValidate>

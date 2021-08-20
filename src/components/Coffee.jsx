@@ -4,7 +4,7 @@ import React from 'react'
 function Coffee() {
   return (
     <div className='coffee'>
-      <div className="recent__works__rectangle" />
+      <div className="purple__rectangle" />
       <div className='coffee__border'>
         <h3>Would you like to support me? ☕</h3>
         <h4>You can buy me a coffee!</h4>

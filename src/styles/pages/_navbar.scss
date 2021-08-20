@@ -7,58 +7,85 @@
   align-items: center;
   justify-content: center;
   background-color: transparent;
-}
-
-.navbar__wrapper {
-  width: 1000px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-}
-
-.navbar__logo {
-  align-items: center;
-  justify-content: center;
-  transition: all 0.4s ease-out;
-  height: 28px;
-  margin-right: 20px;
-}
-
-.nav__menu {
-  display: grid;
-  grid-template-columns: repeat(5, auto);
-  grid-gap: 100px;
-  text-align: center;
-  justify-content: center;
-  flex-wrap: nowrap;
-  :hover {
-    transition: all 0.4s ease-out;
+  .navbar__wrapper {
+    width: 1000px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    .navbar__logo {
+      align-items: center;
+      justify-content: center;
+      transition: all 0.4s ease-out;
+      height: 28px;
+      margin-right: 20px;
+    }
+    .nav__menu {
+      display: grid;
+      grid-template-columns: repeat(5, auto);
+      grid-gap: 100px;
+      text-align: center;
+      justify-content: center;
+      flex-wrap: nowrap;
+      :hover {
+        transition: all 0.4s ease-out;
+      }
+      a {
+        text-decoration: none;
+        color: #000;
+      }
+    }
+    .no__display {
+      display: none;
+    }
+    .display {
+      display: none;
+    }
+    .nav__menu__active {
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      top: 90px;
+      background-color: #f2f2f2;
+      margin: 0;
+      width: 100%;
+      height: 400px;
+      padding: 0;
+      div {
+        border-bottom: solid 1px #fff;
+        height: 80px;
+        display: flex;
+        flex-direction: column;
+        align-items:center;
+        margin: 0;
+        padding:0;
+        justify-content: center;
+        width: 100%;
+        &:hover {
+          background-color: #fafafa;
+        }
+      }
+      a {
+        text-decoration: none;
+        color: #222;
+      }
+    }
   }
-  a {
-    text-decoration: none;
-    color: #000;
-  }
 }
 
-.no__display {
-  display: none;
-}
-
-.display {
-  display: none;
-}
 
 @media screen and (max-width: 1000px) {
-  .navbar__wrapper {
-    width: 100%;
-    max-width: 100vw;
-  }
-  .nav__menu {
-    grid-gap: 60px;
-  }
   .navbar {
     flex-direction: column-reverse;
+    .navbar__wrapper {
+      width: 100%;
+      max-width: 100vw;
+      .nav__menu {
+        grid-gap: 60px;
+      }
+    }
   }
 }
 
@@ -67,59 +94,68 @@
     display: flex;
     align-items: center;
     justify-content: center;
-  }
-  .nav__menu {
-    display: none;
-    width: 90%;
-    margin: 0;
-  }
-  .menu__icon {
-    display: block;
-    color: #333;
-  }
-
-  .no__display {
-    display: none;
-  }
-
-  .display {
-    display: block;
-  }
-
-  .nav__menu__active {
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    top: 90px;
-    background-color: #fff;
-    margin: 0;
-    width: 100%;
-    div {
-      background-color: #fff;
-      border: solid 1px #f2f2f2;
-      &:hover {
-        background-color: #f2f2f2;
+    .navbar__wrapper {
+      width: 85%;
+    justify-content: space-between;
+      .nav__menu {
+        display: none;
+        width: 90%;
+        margin: 0;
+        div {
+          margin: 0;
+          background-color: #fff;
+          height: 100px;
+          text-align: center;
+          width: 100%;
+          margin-left: -40px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          :hover {
+            background-color: #ddd;
+          }
+        }
       }
-    }
-    a {
-      text-decoration: none;
-      color: #222;
-    }
-  }
-  .navbar__main__logo {
-    margin: 0;
-    background-color: #fff;
-    height: 100px;
-    text-align: center;
-    width: 100%;
-    margin-left: -40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    :hover {
-      background-color: #ddd;
+      .no__display {
+        display: none;
+      }
+      .display {
+        display: flex;
+        z-index: 5;
+      }
+      .nav__menu__active {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        top: 90px;
+        left: 0;
+        background-color: #f2f2f2;
+        margin: 0;
+        width: 100%;
+        height: 400px;
+        padding: 0;
+        margin: 0;
+        div {
+          border-bottom: solid 1px #fff;
+          height: 80px;
+          display: flex;
+          flex-direction: column;
+          align-items:center;
+          margin: 0;
+          padding:0;
+          justify-content: center;
+          width: 100%;
+          &:hover {
+            background-color: #fafafa;
+          }
+        }
+        a {
+          text-decoration: none;
+          color: #222;
+        }
+      }
     }
   }
 }
