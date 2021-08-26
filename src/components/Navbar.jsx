@@ -30,19 +30,21 @@ function Navbar({ data }) {
           <img className="navbar__logo" src={Logo} alt="greentangerin_logo" />
         </Link>
         <ul className={click ? 'nav__menu__active' : 'nav__menu'}>
-          {data.Navbar.map((e) => (
-            <div aria-hidden="true" key={e.id} onClick={closeMobileMenu}>
-              <a className={e.cName} href={e.url}>
-                {e.title}
-              </a>
-            </div>
+          {data.Navbar.map((e, index) => (
+            index === 5 ? null : (
+              <div aria-hidden="true" key={e.id} onClick={closeMobileMenu}>
+                <a className={e.cName} href={e.url}>
+                  {e.title}
+                </a>
+              </div>
+            )
           ))}
         </ul>
-        <div aria-hidden="true" key={data.Navbar[5].id} onClick={closeMobileMenu}>
-              <a className={data.Navbar[5].cName} href={data.Navbar[5].url}>
-                {data.Navbar[5].title}
-              </a>
-            </div>
+        <div className='language' key={data.Navbar[5].id} onClick={closeMobileMenu}>
+          <a className={data.Navbar[5].cName} href={data.Navbar[5].url}>
+            {data.Navbar[5].title}
+          </a>
+        </div>
         <div aria-hidden="true" className={click ? 'no__display' : 'display'} onClick={() => handleClick()}>
           <MenuIcon />
         </div>
