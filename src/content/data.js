@@ -1,30 +1,32 @@
-import Header from "../assets/header.png";
-import Dashboard from "../assets/dashboard.png";
-import Market from "../assets/market.png";
-import Bugra from "../assets/bugra.png";
-import Google from "../assets/google.png";
-import GreenTangerin from "../assets/greentangerin_black.png";
-import Error from "../assets/error.jpg";
-import Aliskanlik from "../assets/aliskanlik.png";
-import Aylik from "../assets/aylik.png";
-import Book from '../assets/book_en.png';
-import CvEn from "../assets/cv_en.png";
-import Cv from "../assets/CV.png";
-import Daily from "../assets/daily_en.png";
-import Gunluk from "../assets/gunluk_2.png";
-import GunlukPlan from "../assets/gunluk.png";
-import Habits from "../assets/habits_en.png";
-import Hafta from "../assets/hafta.png";
-import Journal from "../assets/journal_en.png";
-import Kitap from "../assets/kitap.png";
-import Media from "../assets/media_en.png";
-import Medya from "../assets/medya.png";
-import Monthly from "../assets/monthly_en.png";
-import Okul from "../assets/okul.png";
-import School from "../assets/school_en.png";
-import Weekly from "../assets/weekly_en.png";
-import Yearly from "../assets/yearly_en.png";
-import Yillik from "../assets/yillik.png";
+import {
+  Header, 
+  Dashboard, 
+  Market, 
+  Bugra, 
+  Google, 
+  GreenTangerin, 
+  Error, 
+  Aliskanlik, 
+  Aylik, 
+  Book, 
+  CvEn, 
+  Cv, 
+  Daily, 
+  Gunluk, 
+  GunlukPlan, 
+  Habits,
+  Hafta, 
+  Journal, 
+  Kitap, 
+  Media, 
+  Medya, 
+  Monthly, 
+  Okul, 
+  School, 
+  Weekly, 
+  Yearly, 
+  Yillik 
+} from "../assets";
 
 export const data = {
   EN: {
@@ -40,6 +42,12 @@ export const data = {
         title: "Podcast",
         cName: "podcast",
         url: "/podcast",
+      },
+      {
+        id: "3",
+        title: "Newsletter",
+        cName: "newsletter",
+        url: "https://newsletter.bugragulculer.com",
       },
       {
         id: "2",

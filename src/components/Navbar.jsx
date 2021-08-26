@@ -38,6 +38,11 @@ function Navbar({ data }) {
             </div>
           ))}
         </ul>
+        <div aria-hidden="true" key={data.Navbar[5].id} onClick={closeMobileMenu}>
+              <a className={data.Navbar[5].cName} href={data.Navbar[5].url}>
+                {data.Navbar[5].title}
+              </a>
+            </div>
         <div aria-hidden="true" className={click ? 'no__display' : 'display'} onClick={() => handleClick()}>
           <MenuIcon />
         </div>
