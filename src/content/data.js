@@ -330,7 +330,7 @@ export const data = {
         id: "5",
         title: "YouTube",
         cName: "youtube",
-        url: "https://www.youtube.com/channel/UCz-QyCCL_itusMxXAU1V6zw",
+        url: "https://www.youtube.com/c/bugrahangulculer",
       },
       {
         id: "6",
