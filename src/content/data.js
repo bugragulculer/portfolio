@@ -25,7 +25,8 @@ import {
   School, 
   Weekly, 
   Yearly, 
-  Yillik 
+  Yillik,
+  Unsplash
 } from "../assets";
 
 export const data = {
@@ -102,8 +103,14 @@ export const data = {
     ],
     RecentWorks: [
       {
+        logo: Unsplash,
+        name: "Unsplash Clone",
+        desc: "Unsplash Clone with real data from Unsplash API. Developed using React and Sass.",
+        url: "https://unsplash-bugra.web.app",
+      },
+      {
         logo: Dashboard,
-        name: "E-commerce",
+        name: "E-commerce Website",
         desc: "React and Redux based E-Commerce dashboard to keep track of sales, customers and analytics.",
         url: "https://greentangerin-dashboard.web.app",
       },
@@ -147,7 +154,7 @@ export const data = {
     ],
     OtherProjects: [
       {
-        header: "Only Notion Community in Turkey 👥",
+        header: "Only Turkish Notion Community 👥",
         desc: "I founded the first Notion community in Turkey to exhange ideas, learn Notion and create a powerful community.",
         url: "https://bugragulculer.com/notion",
       },
@@ -159,7 +166,7 @@ export const data = {
       {
         header: "Personal Blog 🖋️",
         desc: "Just like YouTube, I'm publishing interesting articles in both English and Turkish. Articles are technology and life related.",
-        url: "https://bugragulculer.com/blog",
+        url: "https://blog.bugragulculer.com",
       },
       {
         header: "Podcast 🎙️",
@@ -173,6 +180,7 @@ export const data = {
       mail: "Your Email",
       name: "Your Name",
       subscribe: "Subscribe",
+      action: "http://newsletter.bugragulculer.com/add_subscriber"
     },
     BlogHeader: {
       name: "iOS 15 ",
@@ -443,6 +451,7 @@ export const data = {
       mail: "Mail Adresiniz",
       name: "Adınız",
       subscribe: "Abone Ol",
+      action: "http://bulten.bugragulculer.com/add_subscriber"
     },
     BlogHeader: {
       name: "iOS 15",

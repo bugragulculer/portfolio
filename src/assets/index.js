@@ -25,3 +25,4 @@ export { default as School } from "../assets/school_en.png";
 export { default as Weekly } from "../assets/weekly_en.png";
 export { default as Yearly } from "../assets/yearly_en.png";
 export { default as Yillik } from "../assets/yillik.png";
+export { default as Unsplash } from "../assets/Unsplash.png";

@@ -1,4 +1,6 @@
+@use '../themes';
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
 // Main Header Component
 .home__header {
   display: flex;
@@ -33,7 +35,7 @@
 .subheader {
   height: 450px;
   width: 100%;
-  background-color: #4531c2;
+  background-color: themes.$primary;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -43,7 +45,7 @@
     font-family: 'Work Sans', sans-serif;
     font-weight: 500;
     font-size: 24px;
-    color: #fff;
+    color: themes.$background;
     text-align: center;
     letter-spacing: -1px;
   }
@@ -54,7 +56,7 @@
     font-weight: 300;
     font-size: 20px;
     width: 500px;
-    color: #fff;
+    color: themes.$background;
   }
 }
 // My Abilities Component
@@ -64,37 +66,38 @@
   align-items: center;
   justify-content: center;
   .abilities__container {
-    background-color: #fff;
-    width: 820px;
+    background-color: themes.$background;
+    max-width: 1000px;
     align-items: center;
-    justify-content: center;
+    justify-content: stretch;
     display: flex; 
     margin-top: -150px;
     margin-bottom: -20px;
     z-index: 5;
-    border: solid 2px #4531c2;
+    //border: solid 2px themes.$border;
     border-radius: 10px;
+    box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.2);
     .abilities__half {
-      width: 390px;
+      width: 100%;
+      height: 810px;
       display: flex;
       flex-direction: row;
-      align-items: flex-start;
-      justify-content: space-between;
-      height: 810px;
+      align-items: center;
+      justify-content: space-around;
       .abilities__half__content{
-        width: 350px;
-        padding-left: 25px;
+        width: 100%;
+        padding: 0 30px;
+        height: 810px;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: flex-start;
-        height: 750px;
         .icon__container {
           display: flex;
           align-items: center;
           justify-content: center;
           transform: scale(4.5);
-          color: #4531c2;
+          color: themes.$primary;
         }
         div {
           height: 20px; 
@@ -102,26 +105,34 @@
           transform: scale(6);
         }
         h1 {
-          font-size: 26px;
+          font-size: 28px;
           margin: 0;
           margin-bottom: 20px;
+          font-family: 'Lato', sans-serif;;
+          font-weight: 600;
         }
         p {
-          font-size: 16px;
+          font-size: 18px;
           margin: 0;
           text-align: center;
           margin-bottom: 10px;
+          font-family: 'Lato', sans-serif;;
+          font-weight: 300;
         }
         h2 {
           font-size: 22px;
+          font-weight: 400;
+          margin-top: 40px;
           margin-bottom: 20px;
+          font-family: 'Lato', sans-serif;;
         }
       }
       .divider {
-        height: 808px;
-        border: solid 1px #dadada;
+        height: 700px;
+        border: solid 1px themes.$border;
         margin: 0;
         padding: 0;
+        width: 0;
       }
     }
   }
@@ -129,7 +140,7 @@
 // Recent Works Component
 .recent__works {
   .recent__works__container {
-    background-color: #4531c2;
+    background-color: themes.$primary;
     margin: 0;
     margin-top: -22px;
     display: flex;
@@ -138,7 +149,7 @@
     justify-content: center;
     font-family: 'Work Sans', sans-serif;
     h1 {
-      color: #fff;
+      color: themes.$background;
       font-weight: 500;
       margin-top: 80px;
       margin-bottom: 40px;
@@ -150,21 +161,24 @@
       flex-wrap: wrap;
       align-items: center;
       justify-content: center;
-      max-width: 850px;
+      max-width: 1100px;
       margin-bottom: 80px;
-      background-color: #4531c2;
+      background-color: themes.$primary;
       .recent__works__item {
-        width: 400px;
+        max-width: 500px;
+        min-width: 400px;
+        width: 50%;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
         height: 250px;
-        background-color: #fff;
+        background-color: themes.$background;
         margin: 10px;
         border-radius: 10px;
         text-decoration: none;
         transition: all 0.4s ease-out;
+        box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.2);
         .works__logo {
           max-width: 75%;
           object-fit: contain;
@@ -181,19 +195,21 @@
           overflow: hidden;
         }
         .show {
-          background-color: #4531c2;
-          height: 210px;
-          width: 360px;
-          border: solid 2px #fff;
+          background-color: themes.$primary;
+          height: 100%;
+          border: solid 2px themes.$border;
           border-radius: 10px;
-          color: #fff;
+          color: themes.$background;
           display: flex;
           align-items: center;
           justify-content: center;
           text-align: center;
           font-size: 18px;
-          padding: 20px;
           font-weight: 300;
+          width: 100%;
+          p {
+            width: 80%;
+          }
         }
       }
     }
@@ -211,8 +227,8 @@
     p {
       height: 80px;
       width: 300px;
-      background-color: #fff;
-      border: solid 2px #4531c2;
+      background-color: themes.$background;
+      border: solid 2px transparent;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -227,12 +243,12 @@
       font-weight: 400;
       font-family: 'Work Sans', sans-serif;
       letter-spacing: -1px;
-      box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+      box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.2);
     }
     p:hover {
-      color: #fff;
-      background-color: #604ce0;
-      box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+      color: themes.$background;
+      background-color: themes.$primary-hover;
+      box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.4);
       transition: all 0.3s ease-out;
     }
   }
@@ -244,6 +260,7 @@
   align-items: center;
   justify-content: center;
   font-family: 'Work Sans', sans-serif;
+  
   h1 {
     font-weight: 500;
     letter-spacing: -2px;
@@ -259,16 +276,19 @@
     max-width: 850px;
     z-index: 2;
     .projects__item {
-      width: 400px;
-      height: 250px;
+      width: 380px;
+      padding: 25px 10px;
+      height: 200px;
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: center;
+      justify-content: space-around;
       border-radius: 10px;
-      border: solid 2px #4531c2;
+      //border: solid 2px themes.$border;
       margin: 10px;
-      background-color: #fff;
+      background-color: themes.$background;
+      box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.2);
+
       h2 {
         font-size: 24px;
         letter-spacing: -1.5px;
@@ -287,14 +307,14 @@
         letter-spacing: -1px;
         font-weight: 400;
         text-align: center;
-        color: #4531c2;
+        color: themes.$primary;
       }
     }
   }
 }
 // Newsletter Form Component 
 .newsletter__form {
-  background-color: #4531c2;
+  background-color: themes.$primary;
   height: 500px;
   margin-top: -22px;
   display: flex;
@@ -302,12 +322,12 @@
   align-items: center;
   justify-content: center;
   font-family: 'Work Sans', sans-serif;
-  color: #fff;
+  color: themes.$background;
   h2 {
     font-weight: 500;
     font-size: 24px;
-    margin-bottom: 20px;
     letter-spacing: -1px;
+    margin: 0;
   }
   h4 {
     font-size: 18px;
@@ -315,12 +335,18 @@
     max-width: 400px;
     text-align: center;
     letter-spacing: -1px;
+    margin: 10px;
   }
   form {
     display: flex;
     flex-direction: column;
-    li {
-      display: none;
+    align-items: center;
+    justify-content: center;
+    div {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
     }
     label {
       display: flex;
@@ -330,13 +356,15 @@
       justify-content: center;
       margin-bottom: 0px;
       font-weight: 300;
-      height: 60px;
       max-width: 750px;
+      margin: 0;
+      margin-top: 20px;
     }
     input {
+      margin: 0;
       margin-top: 10px;
-      background-color: #f6f6f6;
-      border: 1px solid #242424;
+      background-color: themes.$background;
+      border: 1px solid themes.$border;
       border-radius: 5px;
       height: 40px;
       font-weight: 400;
@@ -345,11 +373,11 @@
       padding: 0 25px;
     }
     .button {
-      background-color: #4531c2;
+      background-color: themes.$primary;
       font-weight: 300;
       font-size: 14px;
-      color: white;
-      border: solid 2px #fff;
+      color: themes.$background;
+      border: solid 2px themes.$background;
       border-radius: 10px;
       outline: 0px;
       text-align: center;
@@ -362,6 +390,12 @@
       transition: all 0.4s ease-out;
       margin-top: 40px;
     }
+    :last-child {
+      flex-direction: row;
+      a {
+        color: #f2f2f2;
+      }
+    }
   }
 }
 // Coffee Component
@@ -372,14 +406,13 @@
   align-items: center;
   justify-content: center;
   margin: 0;
-  background-color: #4531c2;
+  background-color: themes.$primary;
   .coffee__border{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     width: 820px ;
-    border: solid 2px #fff;
     margin-top: 50px;
     padding-bottom: 50px;
     border-radius: 10px;
@@ -387,35 +420,36 @@
   h3 {
     margin: 0;
     padding-top: 70px;
-    color: #fff;
+    color: themes.$background;
     font-size: 28px;
-    font-weight: 400;
+    font-weight: 600;
   }
   h4 {
-    color: #fff;
+    color: themes.$background;
     font-size: 20px;
     font-weight: 300;
+    margin: 16px;
   }
   a {
     text-decoration: none;
     display: inline-flex;
     align-items: center;
     color: #000;
-    background-color: #fff;
+    background-color: themes.$background;
     border-radius: 10px;
     border: 1px solid transparent;
     padding: 1rem;
     font-size: 24px;
     transition: all 0.2s ease-out;
-    border: solid 2px #fff;
+    border: solid 2px themes.$background;
     background-color:transparent;
-    color: #fff;
+    color: themes.$background;
     &:hover,
     &:active,
     &:focus {
       transition: all 0.2s ease-out;
-      background-color: #fff;
-      color: #4531c2;
+      background-color: themes.$background;
+      color: themes.$primary;
     }
     img {
       height: 2.6vh;
@@ -435,7 +469,7 @@
 .purple__rectangle {
   height: 150px;
   width: 100%;
-  background-color: #4531c2;
+  background-color: themes.$primary;
   margin: 0;
   margin-top: -150px;
 }

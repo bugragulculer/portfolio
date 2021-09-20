@@ -7,7 +7,7 @@ const RecentWork = ({ item }) => {
     <a className="recent__works__item" onMouseEnter={() => toggleHover(true)} onMouseLeave={() => toggleHover(false)} href={item.url}>
       <img className={hovered ? 'close' : 'works__logo'} src={item.logo} alt={item.name} />
       <section className={hovered ? 'show' : 'close'}>
-        {item.desc}
+        <p>{item.desc}</p>
       </section>
     </a>
   );
