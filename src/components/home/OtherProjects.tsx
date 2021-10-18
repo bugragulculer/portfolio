@@ -1,9 +1,20 @@
 import React from 'react';
 
-function OtherProjectsEN({ data, otherProjects }) {
+interface types {
+  otherProjects: string,
+  data: {
+    OtherProjects: [{
+      header: string,
+      desc: string,
+      url: string
+    }]
+  }
+}
+
+function OtherProjectsEN({ data, otherProjects }: types) {
   return (
     <div className="other__projects__container">
-      <h1>{ otherProjects }</h1>
+      <h1>{otherProjects}</h1>
       <div className="projects__items">
         {data.OtherProjects.map((e) => (
           <div className="projects__item" key={e.header}>

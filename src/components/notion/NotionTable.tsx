@@ -1,18 +1,26 @@
 import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 
-const NotionTable = ({ data, header, background, color }) => {
+interface types {
+  header: string,
+  background: string,
+  color: string,
+  data: any,
+}
+
+const NotionTable = ({ data, header, background, color }:types) => {
   const [activeTab, setActiveTab] = useState(data[0].label);
   const [content, setContent] = useState(data[0]);
-  const buttons = [];
-  data.map((e) => (buttons.push(e.label)));
+  const buttons:any = [];
 
-  const changeTab = (tab) => (
+  data.map((e:any) => (buttons.push(e.label)));
+
+  const changeTab = (tab:string) => (
     setActiveTab(tab)
   );
 
   useEffect(() => (
-    data.map((e) => (
+    data.map((e:any) => (
       activeTab === e.label ? setContent(e) : null
     ))
   ), [activeTab, data]);
@@ -21,7 +29,7 @@ const NotionTable = ({ data, header, background, color }) => {
     <div style={{ backgroundColor: `${background}` }} className='notion__table'>
       <h2 style={{ color: `${color}` }}>{header}</h2>
       <div className="tab__buttons">
-        {buttons.map((button) => <button type="button" style={{ color: `${color}` }} className={button === activeTab ? 'active' : 'normal'} onClick={() => changeTab(button)}>{button}</button>)}
+        {buttons.map((button:string) => <button type="button" style={{ color: `${color}` }} className={button === activeTab ? 'active' : 'normal'} onClick={() => changeTab(button)}>{button}</button>)}
       </div>
       <div className="tab__content" id={content.id}>
         <div className="notion__content__half__right">

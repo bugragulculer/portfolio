@@ -1,7 +1,13 @@
 import React from 'react';
-import notion from '../assets/notion.png';
+import notion from '../../assets/notion.png';
 
-function NotionHeader({ data }) {
+interface types {
+  header: string,
+  subheader: string,
+  desc: string
+}
+
+function NotionHeader({ data }: { data: types }) {
   return (
     <div className="notion__header__container">
       <img src={notion} alt="notion" />

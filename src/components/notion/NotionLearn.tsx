@@ -1,6 +1,13 @@
 import React from 'react';
 
-const NotionVideos = ({ data }) => {
+interface types {
+  learn: string,
+  learnDesc: string,
+  new: string,
+  latest: string,
+}
+
+const NotionVideos = ({ data }: { data: types }) => {
   return (
     <div className="notion__videos">
       <div className="video__desc">

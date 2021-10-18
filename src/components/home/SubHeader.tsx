@@ -1,6 +1,13 @@
 import React from 'react';
 
-function SubHeader({ data }) {
+interface types {
+  SubHeader: {
+    header1: string,
+    header2: string
+  }
+}
+
+function SubHeader({ data }: { data: types }) {
   return (
     <div className="subheader">
       <h3>{data.SubHeader.header1}</h3>

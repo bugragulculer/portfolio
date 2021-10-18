@@ -2,11 +2,21 @@ import React from 'react';
 import CodeIcon from '@material-ui/icons/Code';
 import BrushIcon from '@material-ui/icons/Brush';
 
-function MyAbilities({ data }) {
+interface types {
+  MyAbilities: any,
+  header: string,
+  desc: string,
+  topic1: string,
+  item1: string,
+  topic2: string,
+  item2: string[],
+}
+
+function MyAbilities({ data }: {data: types}) {
   return (
     <div className="abilities">
       <div className="abilities__container">
-        {data.MyAbilities.map((e, index) => (
+        {data.MyAbilities.map((e: types, index: number) => (
           <div className="abilities__half" key={e.header}>
             <div className='abilities__half__content'>
               <div className="icon__container">

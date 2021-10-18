@@ -1,6 +1,10 @@
 import React from 'react';
 
-function PodcastSources({ data }) {
+interface types {
+  sourceHeader: string,
+}
+
+function PodcastSources({ data }:{data:types}) {
   return (
     <>
       <div className="podcast__sources__container">
@@ -8,7 +12,7 @@ function PodcastSources({ data }) {
         <div className="podcast__source__container">
           <div>
             <h2>Spotify</h2>
-            <iframe title="Podcast Source 5" src="https://open.spotify.com/embed-podcast/show/558Alds0OXFl56F0Ar4LxS" height="250" frameBorder="0" allowtransparency="true" allow="encrypted-media" />
+            <iframe title="Podcast Source 5" src="https://open.spotify.com/embed-podcast/show/558Alds0OXFl56F0Ar4LxS" height="250" frameBorder="0" allowTransparency allow="encrypted-media" />
           </div>
           <div>
             <h2>Apple Podcast</h2>

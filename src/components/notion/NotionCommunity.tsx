@@ -1,6 +1,11 @@
 import React from 'react';
 
-function NotionCommunity({ data }) {
+interface types {
+  community: string,
+  communityDesc: string,
+}
+
+function NotionCommunity({ data }: { data: types }) {
   return (
     <div className="notion__community__container">
       <h2>{data.community}</h2>

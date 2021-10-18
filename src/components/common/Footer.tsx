@@ -1,17 +1,25 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Logo from '../assets/bugra.png';
-import youtube from '../assets/youtube.svg';
-import twitter from '../assets/twitter.svg';
-import instagram from '../assets/instagram.svg';
-import spotify from '../assets/spotify.svg';
-import medium from '../assets/medium.svg';
-import linkedin from '../assets/linkedin.svg';
-import github from '../assets/github.svg';
-import dribbble from '../assets/dribbble.svg';
-import behance from '../assets/behance.svg';
+import Logo from '../../assets/bugra.png';
+import youtube from '../../assets/youtube.svg';
+import twitter from '../../assets/twitter.svg';
+import instagram from '../../assets/instagram.svg';
+import spotify from '../../assets/spotify.svg';
+import medium from '../../assets/medium.svg';
+import linkedin from '../../assets/linkedin.svg';
+import github from '../../assets/github.svg';
+import dribbble from '../../assets/dribbble.svg';
+import behance from '../../assets/behance.svg';
 
-const Footer = ({ data }) => {
+interface types {
+  Footer: {
+    header: string,
+    subheader: string,
+    copyright: string
+  }
+}
+
+const Footer = ({ data }: { data: types }) => {
   return (
     <footer className="footer">
       <Link to="/" className="logo">
