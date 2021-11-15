@@ -1,11 +1,11 @@
-import { Navbar, PodcastHeader, PodcastSources, Footer } from '../components';
+import {Navbar, PodcastHeader, PodcastSources, Footer } from '../components';
 
 interface data {
   data: any,
   Podcast: object
 }
 
-const Podcast = ({ data }: data) => (
+const Podcast = ({ data }:data) => (
   <div>
     <Navbar data={data} />
     <PodcastHeader data={data.Podcast} />

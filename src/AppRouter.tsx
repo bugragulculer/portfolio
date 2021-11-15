@@ -1,38 +1,52 @@
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import { Home, Error, Podcast, Notion } from './pages';
-import { data } from './content/data';
+import React, { useState, useEffect } from "react";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { Home, Error, Podcast, Notion } from "./pages";
+import { data } from "./content/data";
+import { RootStateOrAny, useSelector } from "react-redux";
 
-document.title = 'Bugra Gulculer';
+document.title = "Bugra Gulculer";
 
-const Setup = () => (
-  <Router>
-    <Switch>
-      <Route exact path="/">
-        <Home data={data.EN} recentWorks="My Recent Works" otherProjects="Other Projects" />
-      </Route>
-      <Route path="/podcast">
-        <Podcast data={data.EN} />
-      </Route>
-      <Route path="/notion">
-        <Notion data={data.EN} />
-      </Route>
-      <Route exact path="/tr">
-        <Home data={data.TR} recentWorks="Mevcut İşlerim" otherProjects="Diğer Projelerim" />
-      </Route>
-      <Route path="/tr/podcast">
-        <Podcast data={data.TR} />
-      </Route>
-      <Route path="/tr/notion">
-        <Notion data={data.TR} />
-      </Route>
-      <Route path="/tr/*">
-        <Error data={data.TR} />
-      </Route>
-      <Route path="*">
-        <Error data={data.EN} />
-      </Route>
-    </Switch>
-  </Router>
-);
+const Setup = () => {
+  const lang = useSelector((state: RootStateOrAny) => state.lang);
+  const [content, setContent] = useState(data.EN);
+  useEffect(
+    () => (lang === "en" ? setContent(data.EN) : setContent(data.TR)),
+    [lang]
+  );
+  return (
+    <Router>
+      <Switch>
+        <Route exact path="/">
+          <Home
+            data={content}
+            recentWorks="My Recent Works"
+            otherProjects="Other Projects"
+          />
+        </Route>
+        <Route path="/podcast">
+          <Podcast data={content} Podcast={undefined} />
+        </Route>
+        <Route path="/notion">
+          <Notion
+            data={content}
+            recentWorks={""}
+            otherProjects={""}
+            Notion={{
+              planner: "",
+              tracker: "",
+            }}
+            Planner={""}
+            Tracker={""}
+            planner={""}
+            tracker={""}
+          />
+        </Route>
+        <Route path="*">
+          <Error data={content.Error} />
+        </Route>
+      </Switch>
+    </Router>
+  );
+};
 
 export default Setup;

@@ -1,21 +1,47 @@
 $bg-dark-mode: #222;
 $grey-dark-mode: #444;
 $background: #fff;
-$primary:#4531c2;
+$primary: #4531c2;
 $primary-hover: #604ce0;
 $border: #dfdfdf;
-$font: 'Lato', sans-serif;
+$font: "Lato", sans-serif;
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+$dark-bg: #333;
+$dark-bg-hover: #242424;
+$dark-bg-secondary: #161616;
+$dark-bg-secondary-hover: #555;
+$dark-border: #222;
+$dark-primary-bg: #282828;
+$dark-font-purple: #ddd;
+$dark-font-primary: #fff;
+$dark-font-secondary: #eee;
+$dark-font-hover: #f2f2f2;
+$dark-font-active: #ddd;
+
+$light-bg: #fff;
+$light-bg-hover: #f2f2f2;
+$light-bg-secondary: #eee;
+$light-bg-secondary-hover: #e2e2e2;
+$light-border: #ddd;
+$light-primary-bg: #4531c2;
+$light-font-purple: #604ce0;
+$light-font-primary: #000;
+$light-font-secondary: #222;
+$light-font-hover: #161616;
+$light-font-active: #444;
+
+$font: "Lato", sans-serif;

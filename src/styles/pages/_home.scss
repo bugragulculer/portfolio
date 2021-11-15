@@ -1,5 +1,5 @@
-@use '../themes';
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+@use "../themes";
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
 
 // Main Header Component
 .home__header {
@@ -7,19 +7,19 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  margin-bottom: 50px;
+  padding-bottom: 50px;
   .header__text {
-    margin: 0 75px;
+    padding: 0 75px;
     h1 {
       font-size: 24px;
       font-weight: 300;
-      font-family: 'Lato', sans-serif;
+      font-family: "Lato", sans-serif;
       letter-spacing: -1px;
     }
     h2 {
       font-size: 40px;
       font-weight: 500;
-      font-family: 'Lato', sans-serif;
+      font-family: "Lato", sans-serif;
       width: 400px;
       letter-spacing: -1px;
       text-align: start;
@@ -30,6 +30,26 @@
     width: 300px;
     border-radius: 500px;
   }
+}
+
+.home__header--dark {
+  background-color: themes.$dark-bg;
+  color: themes.$dark-font-primary;
+  transition: all ease-out 0.3s;
+}
+.home__header--light {
+  background-color: themes.$light-bg;
+  color: themes.$light-font-primary;
+  transition: all ease-out 0.3s;
+}
+// Purple Containers
+.purple__rectangle {
+  height: 150px;
+  width: 100%;
+  background-color: themes.$primary;
+  margin: 0;
+  margin-top: -150px;
+  transition: all 0.3s ease-out;
 }
 // Subheader Component
 .subheader {
@@ -42,7 +62,7 @@
   justify-content: flex-start;
   h3 {
     margin-top: 100px;
-    font-family: 'Work Sans', sans-serif;
+    font-family: "Work Sans", sans-serif;
     font-weight: 500;
     font-size: 24px;
     color: themes.$background;
@@ -52,11 +72,35 @@
   p {
     text-align: center;
     margin-top: 0px;
-    font-family: 'Work Sans', sans-serif;
+    font-family: "Work Sans", sans-serif;
     font-weight: 300;
     font-size: 20px;
     width: 500px;
     color: themes.$background;
+  }
+}
+.subheader--dark {
+  background-color: themes.$dark-primary-bg;
+  transition: all 0.3s ease-out;
+  h3 {
+    color: themes.$dark-font-primary;
+    transition: all 0.3s ease-out;
+  }
+  p {
+    color: themes.$dark-font-primary;
+    transition: all 0.3s ease-out;
+  }
+}
+.subheader--light {
+  background-color: themes.$light-primary-bg;
+  transition: all 0.3s ease-out;
+  h3 {
+    color: themes.$dark-font-primary;
+    transition: all 0.3s ease-out;
+  }
+  p {
+    color: themes.$dark-font-primary;
+    transition: all 0.3s ease-out;
   }
 }
 // My Abilities Component
@@ -70,7 +114,7 @@
     max-width: 1000px;
     align-items: center;
     justify-content: stretch;
-    display: flex; 
+    display: flex;
     margin-top: -150px;
     margin-bottom: -20px;
     z-index: 5;
@@ -84,7 +128,7 @@
       flex-direction: row;
       align-items: center;
       justify-content: space-around;
-      .abilities__half__content{
+      .abilities__half__content {
         width: 100%;
         padding: 0 30px;
         height: 810px;
@@ -100,7 +144,7 @@
           color: themes.$primary;
         }
         div {
-          height: 20px; 
+          height: 20px;
           margin: 100px 0;
           transform: scale(6);
         }
@@ -108,7 +152,7 @@
           font-size: 28px;
           margin: 0;
           margin-bottom: 20px;
-          font-family: 'Lato', sans-serif;;
+          font-family: "Lato", sans-serif;
           font-weight: 600;
         }
         p {
@@ -116,7 +160,7 @@
           margin: 0;
           text-align: center;
           margin-bottom: 10px;
-          font-family: 'Lato', sans-serif;;
+          font-family: "Lato", sans-serif;
           font-weight: 300;
         }
         h2 {
@@ -124,7 +168,7 @@
           font-weight: 400;
           margin-top: 40px;
           margin-bottom: 20px;
-          font-family: 'Lato', sans-serif;;
+          font-family: "Lato", sans-serif;
         }
       }
       .divider {
@@ -137,17 +181,58 @@
     }
   }
 }
+
+.abilities--dark {
+  background-color: themes.$dark-bg;
+  transition: all 0.3s ease-out;
+  .abilities__container {
+    background-color: themes.$dark-bg;
+    border: solid 2px themes.$dark-border;
+    transition: all 0.3s ease-out;
+    .abilities__half {
+      .abilities__half__content {
+        color: themes.$dark-font-primary;
+        transition: all 0.3s ease-out;
+        .icon__container {
+          color: themes.$dark-font-purple;
+          transition: all 0.3s ease-out;
+        }
+      }
+    }
+  }
+}
+
+.abilities--light {
+  background-color: themes.$light-bg;
+  transition: all 0.3s ease-out;
+  .abilities__container {
+    background-color: themes.$light-bg;
+    border: solid 2px themes.$light-border;
+    transition: all 0.3s ease-out;
+    .abilities__half {
+      .abilities__half__content {
+        color: themes.$light-font-primary;
+        transition: all 0.3s ease-out;
+        .icon__container {
+          color: themes.$light-font-purple;
+          transition: all 0.3s ease-out;
+        }
+      }
+    }
+  }
+}
 // Recent Works Component
+
 .recent__works {
   .recent__works__container {
     background-color: themes.$primary;
     margin: 0;
-    margin-top: -22px;
+    padding-top: 40px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    font-family: 'Work Sans', sans-serif;
+    font-family: "Work Sans", sans-serif;
     h1 {
       color: themes.$background;
       font-weight: 500;
@@ -241,7 +326,7 @@
       font-size: 20px;
       color: #4531c2;
       font-weight: 400;
-      font-family: 'Work Sans', sans-serif;
+      font-family: "Work Sans", sans-serif;
       letter-spacing: -1px;
       box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.2);
     }
@@ -253,14 +338,81 @@
     }
   }
 }
+.recent__works--dark {
+  background-color: themes.$dark-primary-bg;
+  transition: all 0.3s ease-out;
+  .recent__works__container {
+    background-color: themes.$dark-primary-bg;
+    transition: all 0.3s ease-out;
+    h1 {
+      color: themes.$dark-font-primary;
+      transition: all 0.3s ease-out;
+    }
+    div {
+      background-color: themes.$dark-primary-bg;
+      transition: all 0.3s ease-out;
+      .recent__works__item {
+        background-color: themes.$dark-bg;
+        box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.2);
+        transition: all 0.3s ease-out;
+        .show {
+          background-color: themes.$dark-bg;
+          border: solid 2px themes.$dark-border;
+          color: themes.$background;
+          transition: all 0.3s ease-out;
+        }
+      }
+    }
+  }
+  .recent__works__buttons {
+    p {
+      background-color: themes.$dark-primary-bg;
+      transition: all 0.3s ease-out;
+      color: themes.$dark-font-purple;
+      box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.2);
+    }
+    p:hover {
+      color: themes.$dark-font-secondary;
+      background-color: themes.$dark-bg-secondary-hover;
+      transition: all 0.3s ease-out;
+    }
+  }
+}
+.recent__works--light {
+  transition: all 0.3s ease-out;
+  .recent__works__container {
+    transition: all 0.3s ease-out;
+
+    h1 {
+      transition: all 0.3s ease-out;
+    }
+    div {
+      transition: all 0.3s ease-out;
+      .recent__works__item {
+        transition: all 0.3s ease-out;
+        .show {
+          transition: all 0.3s ease-out;
+        }
+      }
+    }
+  }
+  .recent__works__buttons {
+    p {
+      transition: all 0.3s ease-out;
+    }
+    p:hover {
+      transition: all 0.3s ease-out;
+    }
+  }
+}
 // Other Projects Component
 .other__projects__container {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-family: 'Work Sans', sans-serif;
-  
+  font-family: "Work Sans", sans-serif;
+  margin-top: -40px;
   h1 {
     font-weight: 500;
     letter-spacing: -2px;
@@ -312,7 +464,78 @@
     }
   }
 }
-// Newsletter Form Component 
+
+.other__projects__container--dark {
+  background-color: themes.$dark-bg;
+  color: themes.$dark-font-primary;
+  transition: all 0.3s ease-out;
+  h1 {
+    font-weight: 500;
+    letter-spacing: -2px;
+    margin-top: 80px;
+    margin-bottom: 40px;
+    transition: all 0.3s ease-out;
+  }
+  .projects__items {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 850px;
+    z-index: 2;
+    transition: all 0.3s ease-out;
+    .projects__item {
+      background-color: themes.$dark-primary-bg;
+      box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.2);
+      color: themes.$dark-font-secondary;
+      transition: all 0.3s ease-out;
+      h2 {
+        font-size: 24px;
+        letter-spacing: -1.5px;
+        font-weight: 400;
+        text-align: center;
+        transition: all 0.3s ease-out;
+      }
+      p {
+        font-size: 17px;
+        letter-spacing: -1px;
+        font-weight: 300;
+        text-align: center;
+        max-width: 360px;
+        transition: all 0.3s ease-out;
+      }
+      a {
+        font-size: 17px;
+        letter-spacing: -1px;
+        font-weight: 400;
+        text-align: center;
+        color: themes.$dark-font-secondary;
+        transition: all 0.3s ease-out;
+      }
+    }
+  }
+  .purple__rectangle {
+    background-color: themes.$dark-primary-bg;
+    transition: all 0.3s ease-out;
+  }
+}
+.other__projects__container--light {
+  transition: all 0.3s ease-out;
+  h1 {
+    transition: all 0.3s ease-out;
+  }
+  .projects__items {
+    transition: all 0.3s ease-out;
+    .projects__item {
+      transition: all 0.3s ease-out;
+    }
+  }
+  .purple__rectangle {
+    transition: all 0.3s ease-out;
+  }
+}
+// Newsletter Form Component
 .newsletter__form {
   background-color: themes.$primary;
   height: 500px;
@@ -321,7 +544,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-family: 'Work Sans', sans-serif;
+  font-family: "Work Sans", sans-serif;
   color: themes.$background;
   h2 {
     font-weight: 500;
@@ -398,6 +621,55 @@
     }
   }
 }
+
+.newsletter__form--dark {
+  background-color: themes.$dark-primary-bg;
+  color: themes.$dark-font-primary;
+  transition: all 0.3s ease-out;
+  form {
+    input {
+      margin: 0;
+      margin-top: 10px;
+      background-color: themes.$dark-primary-bg;
+      border: 2px solid themes.$dark-bg;
+      color: themes.$dark-font-primary;
+      transition: all 0.3s ease-out;
+    }
+    .button {
+      background-color: themes.$dark-bg-secondary-hover;
+      color: themes.$dark-font-primary;
+      border: solid 2px themes.$dark-border;
+      transition: all 0.3s ease-out;
+    }
+    :last-child {
+      flex-direction: row;
+      transition: all 0.3s ease-out;
+      a {
+        color: themes.$dark-font-primary;
+        transition: all 0.3s ease-out;
+      }
+    }
+  }
+}
+
+.newsletter__form--light {
+  transition: all 0.3s ease-out;
+  form {
+    input {
+      transition: all 0.3s ease-out;
+    }
+    .button {
+      transition: all 0.3s ease-out;
+    }
+    :last-child {
+      transition: all 0.3s ease-out;
+      a {
+        transition: all 0.3s ease-out;
+      }
+    }
+  }
+}
+
 // Coffee Component
 .coffee {
   width: 100%;
@@ -407,12 +679,12 @@
   justify-content: center;
   margin: 0;
   background-color: themes.$primary;
-  .coffee__border{
+  .coffee__border {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 820px ;
+    width: 820px;
     margin-top: 50px;
     padding-bottom: 50px;
     border-radius: 10px;
@@ -442,7 +714,7 @@
     font-size: 24px;
     transition: all 0.2s ease-out;
     border: solid 2px themes.$background;
-    background-color:transparent;
+    background-color: transparent;
     color: themes.$background;
     &:hover,
     &:active,
@@ -465,14 +737,46 @@
     }
   }
 }
-// Purple Containers
-.purple__rectangle {
-  height: 150px;
-  width: 100%;
-  background-color: themes.$primary;
-  margin: 0;
-  margin-top: -150px;
+.coffee--dark {
+  background-color: themes.$dark-primary-bg;
+  color: themes.$dark-font-primary;
+  transition: all 0.3s ease-out;
+  .coffee__border {
+    background-color: themes.$dark-primary-bg;
+    color: themes.$dark-font-primary;
+    transition: all 0.3s ease-out;
+    h3,
+    h4 {
+      text-align: center;
+      transition: all 0.3s ease-out;
+    }
+  }
+  .purple__rectangle {
+    background-color: themes.$dark-primary-bg;
+    transition: all 0.3s ease-out;
+  }
 }
+.coffee--light {
+  background-color: themes.$light-primary-bg;
+  color: themes.$light-font-primary;
+  transition: all 0.3s ease-out;
+  .coffee__border {
+    background-color: themes.$light-primary-bg;
+    color: themes.$light-font-primary;
+    transition: all 0.3s ease-out;
+    h3,
+    h4 {
+      text-align: center;
+      transition: all 0.3s ease-out;
+      color: themes.$dark-font-primary;
+    }
+    a {
+      color: themes.$dark-font-primary;
+      background-color: themes.$light-primary-bg;
+    }
+  }
+}
+
 @media screen and (max-width: 1000px) {
   // Main Header Component
   .home__header {
@@ -494,13 +798,14 @@
   // Main Header Component
   .home__header {
     width: 100%;
-    .header__text{
+    .header__text {
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
     }
-    h1, h2 {
+    h1,
+    h2 {
       width: 90%;
       text-align: center;
     }
@@ -515,7 +820,8 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    h3, p {
+    h3,
+    p {
       margin: 0;
       width: 90%;
     }
@@ -527,7 +833,7 @@
     }
   }
   // Coffee Component
-  .coffee{
+  .coffee {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -539,11 +845,13 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      h3, h4 {
+      h3,
+      h4 {
         text-align: center;
       }
     }
   }
+
   // My Abilities Component
   .abilities {
     width: 100%;
@@ -564,7 +872,7 @@
     .recent__works__items {
       width: 95%;
     }
-    .recent__works__buttons{
+    .recent__works__buttons {
       flex-direction: column;
       .recent__works__a {
         margin-bottom: 20px;
@@ -572,7 +880,6 @@
           margin-bottom: 10px;
         }
       }
-
     }
   }
   // Other Projects Component
@@ -589,7 +896,8 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    h2, h4 {
+    h2,
+    h4 {
       text-align: center;
       width: 90%;
     }

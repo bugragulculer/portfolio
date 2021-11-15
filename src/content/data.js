@@ -1,32 +1,32 @@
 import {
-  Header, 
-  Dashboard, 
-  Market, 
-  Bugra, 
-  Google, 
-  GreenTangerin, 
-  Error, 
-  Aliskanlik, 
-  Aylik, 
-  Book, 
-  CvEn, 
-  Cv, 
-  Daily, 
-  Gunluk, 
-  GunlukPlan, 
+  Header,
+  Dashboard,
+  Market,
+  Bugra,
+  Google,
+  GreenTangerin,
+  Error,
+  Aliskanlik,
+  Aylik,
+  Book,
+  CvEn,
+  Cv,
+  Daily,
+  Gunluk,
+  GunlukPlan,
   Habits,
-  Hafta, 
-  Journal, 
-  Kitap, 
-  Media, 
-  Medya, 
-  Monthly, 
-  Okul, 
-  School, 
-  Weekly, 
-  Yearly, 
+  Hafta,
+  Journal,
+  Kitap,
+  Media,
+  Medya,
+  Monthly,
+  Okul,
+  School,
+  Weekly,
+  Yearly,
   Yillik,
-  Unsplash
+  Unsplash,
 } from "../assets";
 
 export const data = {
@@ -81,7 +81,8 @@ export const data = {
     },
     SubHeader: {
       header1: "Hi, I'm Buğra. 👨🏻‍💻 It is nice to see you here.",
-      header2: "I've been designing and developing websites for two years and it couldn't be more exciting.",
+      header2:
+        "I've been designing and developing websites for two years and it couldn't be more exciting.",
     },
     MyAbilities: [
       {
@@ -90,15 +91,29 @@ export const data = {
         topic1: "Things I Love Designing",
         item1: "UI, Apps, Web, Illustration, Poster",
         topic2: "Design Tools",
-        item2: ["Affinity Designer", "Adobe Photoshop", "Figma", "Webflow", "Invision", "Pen & Paper"],
+        item2: [
+          "Affinity Designer",
+          "Adobe Photoshop",
+          "Figma",
+          "Webflow",
+          "Invision",
+          "Pen & Paper",
+        ],
       },
       {
         header: "Software Developer",
         desc: "I love to plan and develop things from scratch and blend different ideas in the same pot.",
         topic1: "Languages & Libraries I Know",
-        item1: "Javascript, HTML, CSS, React, Express, MongoDB, Sass, TypeScript, Redux",
+        item1:
+          "Javascript, HTML, CSS, React, Express, MongoDB, Sass, TypeScript, Redux",
         topic2: "Dev Tools",
-        item2: ["Terminal", "GitHub", "Storybook", "Visual Studio Code", "Codepen"],
+        item2: [
+          "Terminal",
+          "GitHub",
+          "Storybook",
+          "Visual Studio Code",
+          "Codepen",
+        ],
       },
     ],
     RecentWorks: [
@@ -119,21 +134,18 @@ export const data = {
         name: "Market",
         desc: "A small React based market mockup to get product details from API and sort, filter, paginate the products. By Redux all these products can be added and removed from the cart as well.",
         url: "https://market-mockup.herokuapp.com/",
-        
       },
       {
         logo: Bugra,
         name: "Bugra Gulculer",
         desc: "Current website you're in! It is designed and developed to showcase my work in the most personal way possible.",
-        url: "https://bugragulculer.com"
-
+        url: "https://bugragulculer.com",
       },
       {
         logo: GreenTangerin,
         name: "Green Tangerin",
         desc: "Brand new Green Tangerin website which is still under construction. Payment system will be implemented. It is designed and developed to showcase my illustrations and sell them in a neat and easy way.",
         url: "https://greentangerinwebsite.web.app/home",
-
       },
       {
         logo: Google,
@@ -176,11 +188,12 @@ export const data = {
     ],
     Newsletter: {
       header: "✉️ Subscribe to My Newsletter",
-      subheader: "I am sending a newsletter every Friday. No spam. Unsubscribe anytime.",
+      subheader:
+        "I am sending a newsletter every Friday. No spam. Unsubscribe anytime.",
       mail: "Your Email",
       name: "Your Name",
       subscribe: "Subscribe",
-      action: "http://newsletter.bugragulculer.com/add_subscriber"
+      action: "http://newsletter.bugragulculer.com/add_subscriber",
     },
     BlogHeader: {
       name: "iOS 15 ",
@@ -197,14 +210,16 @@ export const data = {
       community: "Notion Turkey Community is now open!",
       communityDesc: "Get your seat by clicking here now!",
       learn: "Learn Notion with Me!",
-      learnDesc: "I'm publishing Notion videos on YouTube! You can learn a lot from them. English videos will come in a very short time!",
+      learnDesc:
+        "I'm publishing Notion videos on YouTube! You can learn a lot from them. English videos will come in a very short time!",
       new: "If you're new to Notion",
       latest: "Latest Videos",
       planner: "Planner",
       tracker: "Tracker",
     },
     Podcast: {
-      header: "Currently, I only do podcast in Turkish, however, in the near future, I'm planing to record podcasts in English. Stay Tuned.",
+      header:
+        "Currently, I only do podcast in Turkish, however, in the near future, I'm planing to record podcasts in English. Stay Tuned.",
       sourceHeader: "You can list to my podcast in different platforms!",
     },
     Error: {
@@ -314,13 +329,13 @@ export const data = {
         id: "1",
         title: "Notion",
         cName: "notion",
-        url: "/tr/notion",
+        url: "/notion",
       },
       {
         id: "2",
         title: "Podcast",
         cName: "podcast",
-        url: "/tr/podcast",
+        url: "/podcast",
       },
       {
         id: "3",
@@ -359,7 +374,8 @@ export const data = {
     },
     SubHeader: {
       header1: "Merhaba, ben Buğra. 👨🏻‍💻 Sizi burada görmek ne güzel!",
-      header2: "İki yıldır websiteleri tasarlayıp geliştiriyorum ve bu benim tahminimden de eğlenceli bir hal almaya başladı.",
+      header2:
+        "İki yıldır websiteleri tasarlayıp geliştiriyorum ve bu benim tahminimden de eğlenceli bir hal almaya başladı.",
     },
     MyAbilities: [
       {
@@ -369,7 +385,14 @@ export const data = {
         topic1: "Tasarlamayı Sevdiğim Şeyler",
         item1: "UI, Uygulamalar, Web, Ilüstrasyonlar, Poster",
         topic2: "Tasarım Araçları",
-        item2: ["Affinity Designer", "Adobe Photoshop", "Figma", "Webflow", "Invision", "Kağıt & Kalem"],
+        item2: [
+          "Affinity Designer",
+          "Adobe Photoshop",
+          "Figma",
+          "Webflow",
+          "Invision",
+          "Kağıt & Kalem",
+        ],
       },
       {
         logo: "",
@@ -378,7 +401,13 @@ export const data = {
         topic1: "Bildiğim Diller ve Kütüphaneler",
         item1: "Javascript, React, HTML, CSS, Sass, TypeScript, Redux",
         topic2: "Geliştirme Araçları",
-        item2: ["Terminal", "GitHub", "Storybook", "Visual Studio Code", "Codepen"],
+        item2: [
+          "Terminal",
+          "GitHub",
+          "Storybook",
+          "Visual Studio Code",
+          "Codepen",
+        ],
       },
     ],
     RecentWorks: [
@@ -398,7 +427,7 @@ export const data = {
         logo: Bugra,
         name: "Bugra Gulculer",
         desc: "Bulunduğunuz güncel web sitesi! Çalışmamı mümkün olan en kişisel şekilde sergilemek için tasarlanmış ve geliştirilmiştir.",
-        url: "https://bugragulculer.com"
+        url: "https://bugragulculer.com",
       },
       {
         logo: GreenTangerin,
@@ -447,11 +476,12 @@ export const data = {
     ],
     Newsletter: {
       header: "✉️ Haftalık Bültenime kayıt olun!",
-      subheader: "Her Cuma haftalık bültenimi mail kutunuzda bulabilirsiniz! Spam yok. Istediginiz zaman kaydınızı silin.",
+      subheader:
+        "Her Cuma haftalık bültenimi mail kutunuzda bulabilirsiniz! Spam yok. Istediginiz zaman kaydınızı silin.",
       mail: "Mail Adresiniz",
       name: "Adınız",
       subscribe: "Abone Ol",
-      action: "http://bulten.bugragulculer.com/add_subscriber"
+      action: "http://bulten.bugragulculer.com/add_subscriber",
     },
     BlogHeader: {
       name: "iOS 15",
@@ -468,15 +498,16 @@ export const data = {
       community: "Notion Türkiye Topluluğu Açıldı!",
       communityDesc: "Yerinizi almak için buraya şimdi tıklamanız yeterli!",
       learn: "Notion'ı öğrenmeye başlayın",
-      learnDesc: "YouTube'da paylaştığım Notion videolarıyla Notion'ın temellerini öğrenebilir ve size özel sayfalar oluşturabilirsiniz.",
+      learnDesc:
+        "YouTube'da paylaştığım Notion videolarıyla Notion'ın temellerini öğrenebilir ve size özel sayfalar oluşturabilirsiniz.",
       new: "Yeni Başlayanlar İçin",
       latest: "Yeni Başlayanlar İçin",
       planner: "Planlayıcılar",
       tracker: "İzleyiciler",
-      
     },
     Podcast: {
-      header: "Şu an sadece Türkçe olan Podcast'ime hoşgeldiniz. Farklı kaynaklardan bölümleri dinlemek için aşağı kaydırın.",
+      header:
+        "Şu an sadece Türkçe olan Podcast'ime hoşgeldiniz. Farklı kaynaklardan bölümleri dinlemek için aşağı kaydırın.",
       sourceHeader: "Beni farklı platformlarda dinleyebilirsiniz!",
     },
     Error: {

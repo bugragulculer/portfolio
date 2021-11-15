@@ -1,30 +1,39 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import Logo from '../../assets/bugra.png';
-import youtube from '../../assets/youtube.svg';
-import twitter from '../../assets/twitter.svg';
-import instagram from '../../assets/instagram.svg';
-import spotify from '../../assets/spotify.svg';
-import medium from '../../assets/medium.svg';
-import linkedin from '../../assets/linkedin.svg';
-import github from '../../assets/github.svg';
-import dribbble from '../../assets/dribbble.svg';
-import behance from '../../assets/behance.svg';
+import React from "react";
+import { Link } from "react-router-dom";
+import Logo from "../../assets/bugra.png";
+import LogoDark from "../../assets/bugra_dark.png";
+import youtube from "../../assets/youtube.svg";
+import twitter from "../../assets/twitter.svg";
+import instagram from "../../assets/instagram.svg";
+import spotify from "../../assets/spotify.svg";
+import medium from "../../assets/medium.svg";
+import linkedin from "../../assets/linkedin.svg";
+import github from "../../assets/github.svg";
+import dribbble from "../../assets/dribbble.svg";
+import behance from "../../assets/behance.svg";
+import { RootStateOrAny, useSelector } from "react-redux";
 
 interface types {
   Footer: {
-    header: string,
-    subheader: string,
-    copyright: string
-  }
+    header: string;
+    subheader: string;
+    copyright: string;
+  };
 }
 
 const Footer = ({ data }: { data: types }) => {
+  const theme = useSelector((state: RootStateOrAny) => state.theme);
   return (
-    <footer className="footer">
-      <Link to="/" className="logo">
-        <img src={Logo} alt="Logo" className="bugra__logo" />
-      </Link>
+    <footer className={`footer footer--${theme}`}>
+      {theme === "dark" ? (
+        <Link to="/" className="logo">
+          <img src={LogoDark} alt="Logo" className="bugra__logo" />
+        </Link>
+      ) : (
+        <Link to="/" className="logo">
+          <img src={Logo} alt="Logo" className="bugra__logo" />
+        </Link>
+      )}
       <h4 className="quote">{data.Footer.header}</h4>
       <div className="footer__social__media">
         <a href="https://twitter.com/BugraGulculer">

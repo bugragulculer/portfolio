@@ -1,12 +1,18 @@
-import Setup from './AppRouter';
-import './styles/styles.scss';
+import Setup from "./AppRouter";
+import { Provider } from "react-redux";
+import { PersistGate } from "redux-persist/integration/react";
+import "./styles/styles.scss";
 
-document.title = 'Bugra Gulculer';
+document.title = "Bugra Gulculer";
 
-const App = () => {
+const App = ({ store, persistor }: any) => {
   return (
-    <Setup />
-  )
+    <Provider store={store}>
+      <PersistGate persistor={persistor}>
+        <Setup />
+      </PersistGate>
+    </Provider>
+  );
 };
 
 export default App;

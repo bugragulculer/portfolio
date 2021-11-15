@@ -1,41 +1,47 @@
-import React, { useState, useEffect } from 'react';
-import PropTypes from 'prop-types';
+import React, { useState, useEffect } from "react";
+import PropTypes from "prop-types";
+import { RootStateOrAny, useSelector } from "react-redux";
 
 interface types {
-  header: string,
-  background: string,
-  color: string,
-  data: any,
+  header: string;
+  background: string;
+  data: any;
 }
 
-const NotionTable = ({ data, header, background, color }:types) => {
+const NotionTable = ({ data, header, background }: types) => {
+  const theme = useSelector((state: RootStateOrAny) => state.theme);
   const [activeTab, setActiveTab] = useState(data[0].label);
   const [content, setContent] = useState(data[0]);
-  const buttons:any = [];
+  const buttons: any = [];
 
-  data.map((e:any) => (buttons.push(e.label)));
+  data.map((e: any) => buttons.push(e.label));
 
-  const changeTab = (tab:string) => (
-    setActiveTab(tab)
+  const changeTab = (tab: string) => setActiveTab(tab);
+
+  useEffect(
+    () => data.map((e: any) => (activeTab === e.label ? setContent(e) : null)),
+    [activeTab, data]
   );
 
-  useEffect(() => (
-    data.map((e:any) => (
-      activeTab === e.label ? setContent(e) : null
-    ))
-  ), [activeTab, data]);
-
   return (
-    <div style={{ backgroundColor: `${background}` }} className='notion__table'>
-      <h2 style={{ color: `${color}` }}>{header}</h2>
+    <div className={`notion__table notion__table--${background}--${theme}`}>
+      <h2>{header}</h2>
       <div className="tab__buttons">
-        {buttons.map((button:string) => <button type="button" style={{ color: `${color}` }} className={button === activeTab ? 'active' : 'normal'} onClick={() => changeTab(button)}>{button}</button>)}
+        {buttons.map((button: string) => (
+          <button
+            type="button"
+            className={button === activeTab ? "active" : "normal"}
+            onClick={() => changeTab(button)}
+          >
+            {button}
+          </button>
+        ))}
       </div>
       <div className="tab__content" id={content.id}>
         <div className="notion__content__half__right">
-          <h1 style={{ color: `${color}` }}>{content.header}</h1>
-          <p style={{ color: `${color}` }}>{content.desc}</p>
-          <a href={content.url} style={{ color: `${color}` }}>{content.action}</a>
+          <h3>{content.header}</h3>
+          <p>{content.desc}</p>
+          <a href={content.url}>{content.action}</a>
         </div>
         <div className="notion__content__half__left">
           <img src={content.image} alt={content.header} />
