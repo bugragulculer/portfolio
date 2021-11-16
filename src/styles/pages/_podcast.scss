@@ -18,6 +18,10 @@
 .podcast__header__container--dark {
   background-color: themes.$dark-bg;
   color: themes.$dark-font-primary;
+  transition: all 0.3s ease-out;
+}
+.podcast__header__container--light {
+  transition: all 0.3s ease-out;
 }
 // Podcast Sources Component
 .podcast__sources__container {
@@ -117,16 +121,39 @@
 }
 .podcast__sources__container--dark {
   background-color: themes.$dark-primary-bg;
+  transition: all 0.3s ease-out;
   .rectangle {
     background-color: themes.$dark-bg;
+    transition: all 0.3s ease-out;
   }
   .youtube__videos {
     background-color: themes.$dark-primary-bg;
     border-color: themes.$dark-border;
+    transition: all 0.3s ease-out;
   }
   .podcast__source__container {
     div {
       border-color: themes.$dark-border;
+      transition: all 0.3s ease-out;
+    }
+  }
+}
+.podcast__sources__container--light {
+  background-color: themes.$light-primary-bg;
+  transition: all 0.3s ease-out;
+  .rectangle {
+    background-color: themes.$light-bg;
+    transition: all 0.3s ease-out;
+  }
+  .youtube__videos {
+    background-color: themes.$light-primary-bg;
+    border-color: themes.$light-border;
+    transition: all 0.3s ease-out;
+  }
+  .podcast__source__container {
+    div {
+      border-color: themes.$light-border;
+      transition: all 0.3s ease-out;
     }
   }
 }
@@ -151,7 +178,7 @@
     }
     .youtube__videos {
       width: 90vw;
-      
+
       div {
         flex-direction: column;
         width: 100%;

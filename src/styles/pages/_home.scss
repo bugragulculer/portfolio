@@ -222,7 +222,6 @@
   }
 }
 // Recent Works Component
-
 .recent__works {
   .recent__works__container {
     background-color: themes.$primary;
@@ -264,38 +263,7 @@
         text-decoration: none;
         transition: all 0.4s ease-out;
         box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.2);
-        .works__logo {
-          max-width: 75%;
-          object-fit: contain;
-          max-height: 75%;
-          transition: all 0.4s ease-out;
-          margin: 0;
-        }
-        .close {
-          position: absolute;
-          width: 400px;
-          height: 250px;
-          object-fit: contain;
-          opacity: 0;
-          overflow: hidden;
-        }
-        .show {
-          background-color: themes.$primary;
-          height: 100%;
-          border: solid 2px themes.$border;
-          border-radius: 10px;
-          color: themes.$background;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          text-align: center;
-          font-size: 18px;
-          font-weight: 300;
-          width: 100%;
-          p {
-            width: 80%;
-          }
-        }
+        position: relative;
       }
     }
   }
@@ -312,7 +280,6 @@
     p {
       height: 80px;
       width: 300px;
-      background-color: themes.$background;
       border: solid 2px transparent;
       display: flex;
       align-items: center;
@@ -355,11 +322,59 @@
         background-color: themes.$dark-bg;
         box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.2);
         transition: all 0.3s ease-out;
-        .show {
+        .works__logo {
+          object-fit: contain;
+          position: absolute;
+          width: 80%;
+          height: 80%;
+          border-radius: 10px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          text-align: center;
+          overflow: hidden;
           background-color: themes.$dark-bg;
-          border: solid 2px themes.$dark-border;
+          border: solid 0px themes.$dark-border;
           color: themes.$background;
           transition: all 0.3s ease-out;
+          margin: 10px 20px;
+        }
+        .close {
+          object-fit: contain;
+          position: absolute;
+          width: 80%;
+          height: 80%;
+          border-radius: 10px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          text-align: center;
+          opacity: 0;
+          overflow: hidden;
+          background-color: themes.$dark-bg;
+          border: solid 0px themes.$dark-border;
+          color: themes.$background;
+          transition: all 0.3s ease-out;
+        }
+        .show {
+          position: absolute;
+          width: 90%;
+          height: 80%;
+          border-radius: 10px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          text-align: center;
+          font-size: 18px;
+          font-weight: 300;
+          overflow: hidden;
+          background-color: themes.$dark-bg;
+          border: solid 0px themes.$dark-border;
+          color: themes.$background;
+          transition: all 0.3s ease-out;
+          p {
+            width: 80%;
+          }
         }
       }
     }
@@ -379,28 +394,89 @@
   }
 }
 .recent__works--light {
+  background-color: themes.$light-primary-bg;
   transition: all 0.3s ease-out;
   .recent__works__container {
+    background-color: themes.$light-primary-bg;
     transition: all 0.3s ease-out;
-
     h1 {
+      color: themes.$dark-font-primary;
       transition: all 0.3s ease-out;
     }
     div {
+      background-color: themes.$light-primary-bg;
       transition: all 0.3s ease-out;
       .recent__works__item {
+        background-color: themes.$light-bg;
+        box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.2);
         transition: all 0.3s ease-out;
-        .show {
+        .works__logo {
+          object-fit: contain;
+          position: absolute;
+          width: 80%;
+          height: 80%;
+          border-radius: 10px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          text-align: center;
+          overflow: hidden;
+          background-color: themes.$light-bg;
+          border: solid 0px themes.$light-border;
+          color: themes.$light-font-primary;
           transition: all 0.3s ease-out;
+          margin: 10px 20px;
+        }
+        .close {
+          object-fit: contain;
+          position: absolute;
+          width: 80%;
+          height: 80%;
+          border-radius: 10px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          text-align: center;
+          opacity: 0;
+          overflow: hidden;
+          background-color: themes.$light-bg;
+          border: solid 0px themes.$light-border;
+          color: themes.$light-font-primary;
+          transition: all 0.3s ease-out;
+        }
+        .show {
+          position: absolute;
+          width: 90%;
+          height: 80%;
+          border-radius: 10px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          text-align: center;
+          font-size: 18px;
+          font-weight: 300;
+          overflow: hidden;
+          background-color: themes.$light-bg;
+          border: solid 0px themes.$light-border;
+          color: themes.$light-font-primary;
+          transition: all 0.3s ease-out;
+          p {
+            width: 80%;
+          }
         }
       }
     }
   }
   .recent__works__buttons {
     p {
+      background-color: themes.$light-bg;
       transition: all 0.3s ease-out;
+      color: themes.$light-font-purple;
+      box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.2);
     }
     p:hover {
+      color: themes.$dark-font-secondary;
+      background-color: themes.$light-font-purple;
       transition: all 0.3s ease-out;
     }
   }
@@ -413,11 +489,15 @@
   justify-content: center;
   font-family: "Work Sans", sans-serif;
   margin-top: -40px;
+  background-color: themes.$light-bg;
+  color: themes.$light-font-active;
+  transition: all 0.3s ease-out;
   h1 {
     font-weight: 500;
     letter-spacing: -2px;
     margin-top: 80px;
     margin-bottom: 40px;
+    transition: all 0.3s ease-out;
   }
   .projects__items {
     display: flex;

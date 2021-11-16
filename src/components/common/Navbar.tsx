@@ -48,7 +48,7 @@ function Navbar({ data }: { data: types }) {
   }, []);
 
   useEffect(
-    () => (size >= 768 ? setClick(false) : setClick(true)),
+    () => (size >= 768 ? setClick(false) : setClick(click)),
     [size, click]
   );
 
@@ -61,6 +61,7 @@ function Navbar({ data }: { data: types }) {
   const onChangeLang = () => {
     lang === "en" ? dispatch(changeLang("tr")) : dispatch(changeLang("en"));
   };
+
   return (
     <nav className={`navbar navbar--${theme}`}>
       <div className="navbar__wrapper">
@@ -82,8 +83,7 @@ function Navbar({ data }: { data: types }) {
             <img className="navbar__logo" src={Logo} alt="greentangerin_logo" />
           </Link>
         )}
-
-        <ul className={click ? "nav__menu__active" : "nav__menu"}>
+        <ul className={click ? `nav__menu__active--${theme}` : `nav__menu`}>
           {Navbar.map((e: types, index: number) =>
             index === 5 ? null : (
               <div aria-hidden="true" key={e.id} onClick={closeMobileMenu}>
@@ -94,23 +94,6 @@ function Navbar({ data }: { data: types }) {
             )
           )}
         </ul>
-        {/*<label className="switch">
-          <input type="checkbox" onClick={onChangeTheme} />
-          <span className={`slider round slider--${theme}`}>
-            {theme === "light" ? (
-              <Brightness5Icon
-                onClick={onChangeTheme}
-                className="icon--light navbar__desktop"
-              />
-            ) : null}
-            {theme === "dark" ? (
-              <Brightness3Icon
-                onClick={onChangeTheme}
-                className="icon--dark navbar__desktop"
-              />
-            ) : null}
-          </span>
-        </label>*/}
         {theme === "dark" ? (
           <WbSunnyIcon onClick={onChangeTheme} className="icon icon--dark" />
         ) : (
@@ -119,18 +102,17 @@ function Navbar({ data }: { data: types }) {
             className="icon navbar__desktop icon--light"
           />
         )}
-
         <div
           aria-hidden="true"
           className={click ? "no__display" : "display"}
-          onClick={() => handleClick()}
+          onClick={handleClick}
         >
           <MenuIcon />
         </div>
         <div
           aria-hidden="true"
           className={click ? "display" : "no__display"}
-          onClick={() => handleClick()}
+          onClick={handleClick}
         >
           <CloseIcon />
         </div>
