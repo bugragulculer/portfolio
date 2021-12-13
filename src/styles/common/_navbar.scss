@@ -47,19 +47,35 @@
       top: 16px;
       left: 2%;
       text-decoration: none;
-      background-color: #f2f2f2;
-      padding: 5px 10px;
+      padding: 5px 0px;
       border-radius: 5px;
+      width: 44px;
+      text-align: center;
       cursor: pointer;
       z-index: 100;
-      &:hover {
-        background-color: #eee;
-      }
       a {
         text-decoration: none;
         color: #4531c2;
         font-weight: 500;
         font-size: 14px;
+      }
+      .language__menu {
+        position: absolute;
+        top: 36px;
+        text-decoration: none;
+        border-radius: 5px;
+        cursor: pointer;
+        z-index: 100;
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        width: 44px;
+        text-align: center;
+        overflow: hidden;
+        p {
+          padding: 6px 0;
+          margin: 0;
+        }
       }
     }
     .no__display {
@@ -118,11 +134,17 @@
     }
     .language {
       background-color: themes.$dark-bg-secondary;
-      &:hover {
-        background-color: themes.$dark-bg-secondary-hover;
-      }
+    }
+    .language__menu {
+      background-color: themes.$dark-bg-secondary;
       a {
         color: themes.$dark-font-primary;
+      }
+      p {
+        background-color: themes.$dark-bg-secondary;
+        &:hover {
+          background-color: themes.$dark-bg-secondary-hover;
+        }
       }
     }
   }
@@ -142,18 +164,21 @@
         color: themes.$light-font-primary;
       }
     }
-    .language {
+    .language,
+    .language__menu {
       background-color: themes.$light-bg-secondary;
-      &:hover {
-        background-color: themes.$light-bg-secondary-hover;
-      }
       a {
         color: #4531c2;
+      }
+      p {
+        background-color: themes.$light-bg-secondary;
+        &:hover {
+          background-color: themes.$light-bg-secondary-hover;
+        }
       }
     }
   }
 }
-
 
 @media screen and (max-width: 1000px) {
   .navbar {
@@ -260,7 +285,6 @@
 }
 
 .icon--dark {
-  color: #fdb813;
   color: #aaa;
   padding: 6px;
   border: solid 2px #aaa;
@@ -268,7 +292,9 @@
   right: 2%;
   position: fixed;
   top: 16px;
-  z-index:100;
+  z-index: 100;
+  transform: scale(0.8);
+  cursor: pointer;
 }
 
 .icon--light {
@@ -279,5 +305,7 @@
   border-radius: 265px;
   position: fixed;
   top: 16px;
-  z-index:100;
+  z-index: 100;
+  transform: scale(0.8);
+  cursor: pointer;
 }

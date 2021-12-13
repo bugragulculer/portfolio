@@ -1,0 +1,101 @@
+@use "../themes";
+
+.notion__header__container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 100px;
+  font-family: "Work Sans", sans-serif;
+  padding-top: 40px;
+  img {
+    height: 350px;
+    margin: 0 50px;
+  }
+  div {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    font-family: "Work Sans", sans-serif;
+  }
+  h1 {
+    font-size: 50px;
+    font-weight: 600;
+    letter-spacing: -2px;
+    margin: 0;
+  }
+  h2 {
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: -2px;
+    margin: 10px 0;
+  }
+  h3 {
+    font-size: 16px;
+    font-weight: 300;
+    letter-spacing: -1px;
+    max-width: 350px;
+    margin: 0;
+  }
+}
+.notion__header__container--dark {
+  background-color: themes.$dark-bg;
+  color: themes.$dark-font-primary;
+  transition: all 0.3s ease-out;
+}
+.notion__header__container--light {
+  transition: all 0.3s ease-out;
+}
+
+@media screen and (max-width: 1200px) {
+  .notion__header__container {
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    img {
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+    }
+    div {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      h1,
+      h2,
+      h3 {
+        text-align: center;
+        width: 95%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .notion__header__container {
+    flex-direction: column;
+    width: 95%;
+    align-items: center;
+    justify-content: center;
+    img {
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+    }
+    div {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      h1,
+      h2,
+      h3 {
+        text-align: center;
+        width: 95%;
+      }
+    }
+  }
+}

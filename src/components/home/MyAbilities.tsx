@@ -24,11 +24,11 @@ function MyAbilities({ data }: { data: types }) {
               <div className="icon__container">
                 {index === 0 ? <BrushIcon /> : <CodeIcon />}
               </div>
-              <h1>{e.header}</h1>
+              <h2>{e.header}</h2>
               <p>{e.desc}</p>
-              <h2>{e.topic1}</h2>
+              <h3>{e.topic1}</h3>
               <p>{e.item1}</p>
-              <h2>{e.topic2}</h2>
+              <h3>{e.topic2}</h3>
               {e.item2.map((f) => (
                 <p key={f}>{f}</p>
               ))}

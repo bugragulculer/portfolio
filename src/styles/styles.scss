@@ -1,9 +1,23 @@
-@use './pages/app';
-@use './pages/blog';
-@use './pages/error';
-@use './pages/footer';
-@use './pages/home';
-@use './pages/navbar';
-@use './pages/notion';
-@use './pages/podcast';
-@use './themes';
+// Home Components
+@use './home/coffee';
+@use './home/mainHeader';
+@use './home/myAbilities';
+@use './home/myNewsletter';
+@use './home/otherProjects';
+@use './home/recentWorks';
+@use './home/subHeader';
+
+// Notion Components
+@use './notion/community';
+@use './notion/header';
+@use './notion/learn';
+@use './notion/table';
+
+// Podcast Components
+@use './podcast/podcastHeader';
+@use './podcast/podcastSources';
+
+// Common Components
+@use './common/footer';
+@use './common/navbar';
+@use './common/error';

@@ -1,0 +1,35 @@
+@use "../themes";
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+.podcast__header__container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  h1 {
+    font-family: "Work Sans", sans-serif;
+    font-weight: 400;
+    letter-spacing: -2px;
+    max-width: 750px;
+    text-align: center;
+  }
+}
+.podcast__header__container--dark {
+  background-color: themes.$dark-bg;
+  color: themes.$dark-font-primary;
+  transition: all 0.3s ease-out;
+}
+.podcast__header__container--light {
+  transition: all 0.3s ease-out;
+}
+
+@media screen and (max-width: 768px) {
+  .podcast__header__container {
+    width: 100%;
+    h1 {
+      width: 80%;
+      text-align: center;
+    }
+  }
+}

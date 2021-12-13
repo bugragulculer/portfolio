@@ -32,6 +32,7 @@ function Navbar({ data }: { data: types }) {
 
   const [click, setClick] = useState(false);
   const [size, setSize] = useState({});
+  const [langMenu, setLangMenu] = useState(false);
   const dispatch = useDispatch();
 
   const handleClick = () => setClick(!click);
@@ -58,17 +59,34 @@ function Navbar({ data }: { data: types }) {
       : dispatch(changeTheme("dark"));
   };
 
-  const onChangeLang = () => {
-    lang === "en" ? dispatch(changeLang("tr")) : dispatch(changeLang("en"));
+  const onChangeLang = (language:string) => {
+    dispatch(changeLang(language));
+  };
+
+  const handleLanguageMenu = () => {
+    setLangMenu(!langMenu);
+    closeMobileMenu();
   };
 
   return (
     <nav className={`navbar navbar--${theme}`}>
       <div className="navbar__wrapper">
-        <div className="language" key={Navbar[5].id} onClick={closeMobileMenu}>
-          <div className={Navbar[5].cName} onClick={onChangeLang}>
-            {lang === "en" ? "tr" : "en"}
-          </div>
+        <div
+          className="language"
+          key={Navbar[5].id}
+          onClick={handleLanguageMenu}
+        >
+          {langMenu ? (
+            <div>
+              {lang}
+              <div className="language__menu">
+                <p onClick={() => onChangeLang("en")}>en</p>
+                <p onClick={() => onChangeLang("tr")}>tr</p>
+              </div>
+            </div>
+          ) : (
+            <div>{lang}</div>
+          )}
         </div>
         {theme === "dark" ? (
           <Link className="navbar__logo" to="/">
